@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>流转详情</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css" />
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--头部 begin-->
+				<div class="header" style="background-position: top center;overflow: hidden;">
+					<div class="left fl" style="width: 60%;">
+						<img src="../img/commonImg/logo.png" />
+						<span class="topic">流程中心</span>
+					</div>
+					<div class="login fl" style="width: 40%;">
+						<span>下午好，</span> 
+						<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+						<ul  class="dropdown-menu" aria-labelledby="dropdown1">
+							<li><i class="glyphicon glyphicon-log-out"></i><a href="/ekp/logout.jsp">退出</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--头部  end-->
+				<!--内容部分  begin-->
+				<div class="wrapper col-md-12" style="padding:0;">
+					<div class="fixedWidthCon">
+						<!--内容部分  顶部区域-->
+						<div class="topSec">
+							<!--面包屑部分-->
+							<ol class="breadcrumb">
+								<li>
+									<a href="02-流程审批单_V5.html">流程中心</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">流转详情</a>
+								</li>
+							</ol>
+							<!--操作按钮区域-->
+							<div class="operaSec">
+								<!--<button class="btn btn-tahoe mr20" onclick="history.go(-1)">返回</button>-->
+								<button class="btn btn-tahoe mr20" onclick="closeWin()">关闭</button>
+							</div>
+						</div>
+						<!--内容部分 内容页签  begin-->
+						<div class="section">
+							<!--panel-流程信息 -->
+							<div class="panel-default tahoe-panel">
+								<table class="table table-condensed table-striped-chg  table-tahoe">
+									<tbody>
+										<tr>
+											<td style="padding: 0;">
+												<div class="panel panel-default tahoe-panel mbIm0">
+													<div class="panel-heading clearfix">
+														<h3 class="panel-title">流转日志</h3>
+														<div class="panel-hd-btns">
+															<button type="button" class="btn btn-tahoe wIm100">以特权身份操作</button>
+														</div>
+													</div>
+													<table class="table table-striped table-bordered table-condensed table-dynamic vm">
+												 		<thead class="tc">
+												 			<tr>
+												 				<th width="15%">时间</th>
+												 				<th width="15%">节点名</th>
+												 				<th width="10%">操作者</th>
+												 				<th width="30%">操作</th>
+												 				<th width="15%">操作系统</th>
+												 				<th width="15%">下一节点通知方式</th>
+												 			</tr>
+												 		</thead>
+												 		<tbody class="tc bb">
+												 			<tr>        
+												 				<td>2018-04-13 16:16</td>
+												 				<td>起草节点</td>
+												 				<td>刘金华(信息经理)</td>
+												 				<td>提交文档</td>
+												 				<td>起草人-提交文档</td>
+												 				<td>待办</td>
+												 			</tr>
+												 			<tr>        
+												 				<td>2018-04-13 16:18</td>
+												 				<td>审批节点 </td>
+												 				<td>王建华</td>
+												 				<td>协办：“李轩”</td>
+												 				<td>处理人-协办</td>
+												 				<td>待办</td>
+												 			</tr>
+												 			<tr>        
+												 				<td>2018-04-13 16:16</td>
+												 				<td>起草节点</td>
+												 				<td>刘金华(信息经理)</td>
+												 				<td>提交文档</td>
+												 				<td>起草人-提交文档</td>
+												 				<td>待办</td>
+												 			</tr>
+												 			<tr>        
+												 				<td>2018-04-13 16:18</td>
+												 				<td>审批节点 </td>
+												 				<td>王建华</td>
+												 				<td>协办：“李轩”</td>
+												 				<td>处理人-协办</td>
+												 				<td>待办</td>
+												 			</tr>
+												 			<tr>        
+												 				<td>2018-04-13 16:16</td>
+												 				<td>起草节点</td>
+												 				<td>刘金华(信息经理)</td>
+												 				<td>提交文档</td>
+												 				<td>起草人-提交文档</td>
+												 				<td>待办</td>
+												 			</tr>
+												 			<tr>        
+												 				<td>2018-04-13 16:18</td>
+												 				<td>审批节点 </td>
+												 				<td>王建华</td>
+												 				<td>协办：“李轩”</td>
+												 				<td>处理人-协办</td>
+												 				<td>待办</td>
+												 			</tr>
+												 		</tbody>
+												 	</table>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="padding: 0;">
+												<div class="panel panel-default tahoe-panel mbIm0">
+													<div class="panel-heading clearfix">
+														<h3 class="panel-title">流程信息</h3>
+													</div>
+													<table class="table table-striped table-bordered table-condensed table-dynamic vm">
+												 		<thead class="tc">
+												 			<tr>
+												 				<th width="10%">节点</th>
+												 				<th width="10%">节点名</th>
+												 				<th width="10%">操作者角色</th>
+												 				<th width="15%">处理人员</th>
+												 				<th width="20%">处理方式</th>
+												 				<th width="20%">流向</th>
+												 				<th width="15%">备注</th>
+												 			</tr>
+												 		</thead>
+												 		<tbody class="tc bb">
+												 			<tr class="danger">
+												 				<td>N4</td>
+												 				<td>审批节点</td>
+												 				<td>王建华</td>
+												 				<td>王建华</td>
+												 				<td>审批：串行</td>
+												 				<td>N6抄送节点</td>
+												 				<td>当前结点</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N6</td>
+												 				<td>抄送节点</td>
+												 				<td>左松年</td>
+												 				<td>左松年</td>
+												 				<td></td>
+												 				<td>N3结束节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N4</td>
+												 				<td>审批节点</td>
+												 				<td>王建华</td>
+												 				<td>王建华</td>
+												 				<td>审批：串行</td>
+												 				<td>N6抄送节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N6</td>
+												 				<td>抄送节点</td>
+												 				<td>左松年</td>
+												 				<td>左松年</td>
+												 				<td></td>
+												 				<td>N3结束节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N4</td>
+												 				<td>审批节点</td>
+												 				<td>王建华</td>
+												 				<td>王建华</td>
+												 				<td>审批：串行</td>
+												 				<td>N6抄送节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N6</td>
+												 				<td>抄送节点</td>
+												 				<td>左松年</td>
+												 				<td>左松年</td>
+												 				<td></td>
+												 				<td>N3结束节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N4</td>
+												 				<td>审批节点</td>
+												 				<td>王建华</td>
+												 				<td>王建华</td>
+												 				<td>审批：串行</td>
+												 				<td>N6抄送节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 			<tr>
+												 				<td>N6</td>
+												 				<td>抄送节点</td>
+												 				<td>左松年</td>
+												 				<td>左松年</td>
+												 				<td></td>
+												 				<td>N3结束节点</td>
+												 				<td>未执行</td>
+												 			</tr>
+												 		</tbody>
+												 	</table>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="padding: 0;">
+												<div class="panel panel-default tahoe-panel mbIm0">
+													<div class="panel-heading">
+													</div>
+													<table class="table table-condensed table-bordered vm">
+												 		<tbody>
+												 			<tr>        
+												 				<td width="15%" class="tdBg">当前处理人</td>
+												 				<td>王建华(协办：“李轩”)</td>
+												 			</tr>
+												 			<tr>        
+												 				<td width="15%" class="tdBg">已经处理人</td>
+												 				<td>刘金华 </td>
+												 			</tr>
+												 		</tbody>
+												 	</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								
+							</div>
+							<!--pabel-流转日志-->
+							<div class="panel panel-default tahoe-panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">流程图</h3>
+								</div>
+								<table class="table">
+									<tbody>
+										<tr class="w">
+											<td>
+												<iframe id="WF-Iframe" class="bddd" src="" width="100%" height=""></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!--内容部分  end-->
+				<!--页面弹出框样式：modal Section  begin-->
+				<div class="col-md-12 modalSec"></div>
+				<!--页面弹出框样式：modal Section  end-->
+			</div>
+		</div>
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/icheck/js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//调用时间插件；
+				$(".bs-timepicker").datetimepicker({
+					language: 'zh',
+					format: 'yyyy-mm-dd hh:ii',
+					autoclose: true
+				});
+
+				//调用Icheck插件，渲染checkbox样式；
+				$(("[type='checkbox']")).iCheck({
+					checkboxClass: 'icheckbox_minimal-red',
+				});
+
+				var $checkboxAll = $(".js-checkbox-all"),
+					$checkbox = $checkboxAll.parents(".table").find("tbody [type='checkbox']"),
+					length = $checkbox.length,
+					i = 0;
+				//全选checkbox
+				$checkboxAll.on("ifClicked", function(event) {
+					if(event.target.checked) {
+						$checkbox.iCheck('uncheck');
+						i = 0;
+					} else {
+						$checkbox.iCheck('check');
+						i = length;
+					}
+				});
+				$checkbox.on('ifClicked', function(event) {
+					event.target.checked ? i-- : i++;
+					if(i == length) {
+						$checkboxAll.iCheck('check');
+					} else {
+						$checkboxAll.iCheck('uncheck');
+					}
+				})
+
+			})
+			//显示选择联系人的弹窗口；
+			function showContactModal(obj) {
+				alert('显示联系人弹窗口！');
+				$(obj).blur();
+			}
+			//closeWin()
+			function closeWin(){
+				window.close();
+			}
+		</script>
+	</body>
+
+</html>

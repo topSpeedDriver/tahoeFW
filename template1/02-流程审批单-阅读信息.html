@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>阅读信息</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css" />
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--头部 begin-->
+				<header class="col-md-12 header">
+					<div class="col-md-10 left">
+						<img src="../img/commonImg/logo.png" />
+						<span class="topic">流程中心</span>
+					</div>
+					<div class="col-md-2  login">
+						<span>下午好，</span>
+						<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown1">
+							<li><i class="glyphicon glyphicon-log-out"></i>
+								<a href="/ekp/logout.jsp">退出</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+				<!--头部  end-->
+				<!--内容部分  begin-->
+				<div class="wrapper col-md-12" style="padding:0;">
+					<div class="fixedWidthCon">
+						<!--内容部分  顶部区域-->
+						<div class="topSec">
+							<!--面包屑部分-->
+							<ol class="breadcrumb">
+								<li>
+									<a href="02-流程审批单_V5.html">流程中心</a>
+								</li>
+								<!--<li>
+									<a href="javascript:void(0);">集团总部</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">个人事物</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">出差申请</a>
+								</li>-->
+								<li>
+									<a href="javascript:void(0);">阅读信息</a>
+								</li>
+							</ol>
+							<!--操作按钮区域-->
+							<div class="operaSec">
+								<!--<button class="btn btn-tahoe mr20" onclick="history.go(-1)">返回</button>-->
+								<button type="button" class="btn btn-tahoe mr20" onclick="closeWin()">关闭</button>
+							</div>
+						</div>
+						<!--内容部分 内容页签  begin-->
+						<div class="section">
+							<!--panel -权限Table-->
+							<div class="panel panel-default tahoe-panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">权限</h3>
+								</div>
+								<table class="table   table-condensed table-striped  table-tahoe table-narrow table-narrow-last">
+									<tbody>
+										<tr>
+											<td width="15%">可阅读者</td>
+											<td width="85%">福利主管；考勤主管；人事主管；薪酬经理；福利专员（北京区域）；考勤主管（北京区域）人事专员（北京区域）薪酬经理（北京区域）;</td>
+										</tr>
+										<tr>
+											 <td width="15%">附件权限</td>
+											 <td width="85%" class="vm">可拷贝者(只对MS Word附件有效)：<未限制> <br /> 可下载者(只对MS Word、MS Excel和MS PPT附件有效)：  <未限制> <br /> 可打印者(只对MS Word和MS Excel附件有效)：  <未限制><br /> </td>
+										</tr>  
+									</tbody>
+								</table>	
+							</div>	
+							<!--panel-阅读信息 -->
+							<div class="panel panel-default tahoe-panel">
+								<div class="panel-heading">
+									<h3 class="panel-title"> 阅读信息</h3>
+								</div>
+								<table class="table table-condensed table-striped  table-tahoe table-narrow table-narrow-last">
+									<tbody>
+										<tr>
+											<td width="15%">已阅人员</td>
+											<td width="85%">邹喜娟;高晴;王建华 </td>
+										</tr>
+										<tr>
+											 <td width="15%">阅读记录 </td>
+											 <td width="85%">
+											 	<table class="table table-bordered mb5 table-tahoe">
+											 		<thead class="tc">
+											 			<tr>
+											 				<th width="10%">序号</th>
+											 				<th width="20%">阅读人</th>
+											 				<th width="20%">阅读时间</th>
+											 				<th width="30%">部门</th>
+											 				<th width="20%">阅读阶段</th>
+											 			</tr>
+											 		</thead>
+											 		<tbody class="tc">
+											 			<tr>        
+											 				<td>1</td>
+											 				<td>高晴</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>2</td>
+											 				<td>邹喜娟</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政管理组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>3</td>
+											 				<td>高晴</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>4</td>
+											 				<td>邹喜娟</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政管理组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>5</td>
+											 				<td>高晴</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>6</td>
+											 				<td>邹喜娟</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政管理组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>7</td>
+											 				<td>高晴</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>8</td>
+											 				<td>邹喜娟</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政管理组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>9</td>
+											 				<td>高晴</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 			<tr>        
+											 				<td>10</td>
+											 				<td>邹喜娟</td>
+											 				<td>2018-03-12 15:52</td>
+											 				<td>行政管理组</td>
+											 				<td>流程中 </td>
+											 			</tr>
+											 		</tbody>
+											 	</table>
+										 		<div class="pageIniation">
+													<div class="pageLeft">
+														<span class="ml10 mr10">第1到第50条记录，共55条记录</span>
+														<span>每页
+															<select class="pageIpt">
+																<option value="0">5</option>
+																<option value="1">10</option>
+																<option value="2">15</option>
+																<option value="3">20</option>
+																<option value="4">25</option>
+																<option value="5">50</option>
+															</select>
+														</span>
+														<span class="mr5">条记录</span>
+														<a href="javascript:void(0);">刷新</a>
+														<span class="ml5">到第</span>
+														<input type="text" class="pageIpt" />
+														<span>页</span>
+														<a href="javascript:void(0);">跳转</a>
+													</div>
+													<div class="pageRight">
+														<ul class="list-unstyled mb0 ml30">
+															<li>&lt;</li>
+															<li>1</li>
+															<li class="tahoe-red">2</li>
+															<li>3</li>
+															<li>4</li>
+															<li>5</li>
+															<li>......</li>
+															<li>16</li>
+															<li>17</li>
+															<li>18</li>
+															<li>19</li>
+															<li>&gt;</li>
+														</ul>
+													</div>
+											 	</div>
+											 </td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>备注：阅读次数(点击率)仅统计发布阶段的阅读记录</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!--内容部分  end-->
+				<!--页面弹出框样式：modal Section  begin-->
+				<div class="col-md-12 modalSec"></div>
+				<!--页面弹出框样式：modal Section  end-->
+			</div>
+		</div>
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//closeWin()
+			function closeWin(){
+				window.close();
+			}
+		</script>
+	</body>
+
+</html>

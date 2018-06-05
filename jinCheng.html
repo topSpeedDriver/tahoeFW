@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>案件进程</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css"/>
+		<link rel="stylesheet" href="Content/Css/base.css" />
+		<link rel="stylesheet" href="Content/Css/main.css" />
+        <link rel="stylesheet" href="Content/Css/font/iconfont.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--这是头部-->
+				<header class="col-md-12 header">
+					<div class="col-md-8">
+						<div class="row">
+							<img class="logoImg" src="Content/Images/common/logo.png"/>
+							<span class="topic">案件上报</span>
+						</div>
+					</div>
+					<div class="col-md-4 login">
+						<div class="row">
+							<span>欢迎您&nbsp;,</span>
+							<a id="currentUser" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">刘百明<span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="currentUser">
+								<li><i class="glyphicon glyphicon-log-out"></i><a href="javascript:void(0);">退出</a></li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<!--这是头部  end-->
+
+				<!--非左右结构内容部分 start-->
+                <div class="main">
+					<ul class="tab">
+						<li><a href="javascript:void(0);">案件进程</a></li>
+						<li><a href="javascript:void(0);">案件信息</a></li>
+						<li><a href="javascript:void(0);">一审</a></li>
+						<li><a href="javascript:void(0);">结案</a></li>
+					</ul>
+				</div>
+				<!--非左右结构内容部分 end-->
+            </div>
+		</div>
+		<script src="Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            $(function(){
+                $('.toggle-nav').click(function(){
+                    $('.left-menu').toggleClass('little');
+                    $('.rightMain').toggleClass('large');
+                });
+            });
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* iCheck plugin skins
+----------------------------------- */
+@import url("minimal/_all.css");
+/*
+@import url("minimal/minimal.Css");
+@import url("minimal/red.Css");
+@import url("minimal/green.Css");
+@import url("minimal/blue.Css");
+@import url("minimal/aero.Css");
+@import url("minimal/grey.Css");
+@import url("minimal/orange.Css");
+@import url("minimal/yellow.Css");
+@import url("minimal/pink.Css");
+@import url("minimal/purple.Css");
+*/
+
+@import url("square/_all.css");
+/*
+@import url("square/square.Css");
+@import url("square/red.Css");
+@import url("square/green.Css");
+@import url("square/blue.Css");
+@import url("square/aero.Css");
+@import url("square/grey.Css");
+@import url("square/orange.Css");
+@import url("square/yellow.Css");
+@import url("square/pink.Css");
+@import url("square/purple.Css");
+*/
+
+@import url("flat/_all.css");
+/*
+@import url("flat/flat.Css");
+@import url("flat/red.Css");
+@import url("flat/green.Css");
+@import url("flat/blue.Css");
+@import url("flat/aero.Css");
+@import url("flat/grey.Css");
+@import url("flat/orange.Css");
+@import url("flat/yellow.Css");
+@import url("flat/pink.Css");
+@import url("flat/purple.Css");
+*/
+
+@import url("line/_all.css");
+/*
+@import url("line/line.Css");
+@import url("line/red.Css");
+@import url("line/green.Css");
+@import url("line/blue.Css");
+@import url("line/aero.Css");
+@import url("line/grey.Css");
+@import url("line/orange.Css");
+@import url("line/yellow.Css");
+@import url("line/pink.Css");
+@import url("line/purple.Css");
+*/
+
+@import url("polaris/polaris.css");
+
+@import url("futurico/futurico.css");

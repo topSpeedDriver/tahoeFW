@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>案件上报</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="Content/Css/zTreeStyle/zTreeStyle.css"/>
+		<link rel="stylesheet" href="Content/Css/base.css" />
+		<link rel="stylesheet" href="Content/Css/main.css" />
+        <link rel="stylesheet" href="Content/Css/font/iconfont.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+
+                <!--这是头部-->
+                <header class="col-md-12 header">
+                     <div class="col-md-8">
+                         <div class="row">
+                             <img class="logoImg" src="Content/Images/common/logo.png"/>
+                             <span class="topic">案件上报</span>
+                         </div>
+                     </div>
+                     <div class="col-md-4 login">
+                         <div class="row">
+                             <span>欢迎您&nbsp;,</span>
+                             <a id="currentUser" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">刘百明<span class="caret"></span></a>
+                             <ul class="dropdown-menu" aria-labelledby="currentUser">
+                                 <li><i class="glyphicon glyphicon-log-out"></i><a href="javascript:void(0);">退出</a></li>
+                             </ul>
+                         </div>
+                    </div>
+                </header>
+                <!--这是头部  end-->
+
+				<!--这是左侧菜单 start-->
+				<nav class="left-menu">
+                    <div class="nav-title">
+                        <h6>诉讼管理系统</h6>
+                        <span></span>
+                    </div>
+                    <ul>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav1"></span>首页<i class="nextChild"></i></a></li>
+                        <li class="active"><a href="javascript:void(0);"><span class="icon icon-nav2"></span>案件上报<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav3"></span>统计查询<i class="nextChild"></i></a>
+                            <ul class="childUl">
+                                <li class="active"><a href="javascript:void(0);">案件查询<i class="nextChild"></i></a></li>
+                                <li><a href="javascript:void(0);">费用律师统计<i class="nextChild"></i></a></li>
+                                <li><a href="javascript:void(0);">我司承担诉讼<i class="nextChild"></i></a></li>
+                                <li><a href="javascript:void(0);">流程统计<i class="nextChild"></i></a></li>
+                                <li><a href="javascript:void(0);">律师费用统计表<i class="nextChild"></i></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav4"></span>律师管理<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav5"></span>审批范本库<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav6"></span>评价排名<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav7"></span>系统配置<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);"><span class="icon icon-nav8"></span>帮助<i class="nextChild"></i></a></li>
+                    </ul>
+                    <a class="toggle-nav" href="javascript:void(0);"></a>
+				</nav>
+				<!--这是左侧菜单 end-->
+
+                <!--这是右侧主要内容 start-->
+                <div class="rightMain">
+
+                    <div class="breadcrumb">
+                        您现在的位置：<a href="#">首页</a>&nbsp;>&nbsp;>&nbsp;案件上报
+                    </div>
+
+                    <!--申请信息-->
+                    <div class="panel panel-default tahoe-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">申请信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-tahoe">
+                                <div class="form-group single special">
+                                    <label class="control-label">标题<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control" placeholder="请输入案件标题">
+                                    </div>
+                                    <div class="point pt5">
+                                        <p>示例：<span class="colorRed">xx</span>诉<span class="colorRed">xxxx</span>公司<span class="colorRed">xxxx</span>案件 , 标题长度应不大于80个字。</p>
+                                    </div>
+                                </div>
+                                <div class="form-group double special">
+                                    <label class="control-label">上报人</label>
+                                    <div class="form-input">
+                                        <p class="form-control">刘百明</p>
+                                    </div>
+                                </div>
+                                <div class="form-group double special">
+                                    <label class="control-label">上报部门</label>
+                                    <div class="form-input">
+                                        <p class="form-control">华夏幸福\股份公司总部\信息管理中心\信息化项目组\资源并购</p>
+                                    </div>
+                                </div>
+                                <div class="form-group double special">
+                                    <label class="control-label">上报时间</label>
+                                    <div class="form-input">
+                                        <p class="form-control">2018-05-23 13:39:44</p>
+                                    </div>
+                                </div>
+                                <div class="form-group double special">
+                                    <label class="control-label">涉案单位<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control" readonly data-toggle="modal" data-target="#SheAnDanWei">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--基础信息-->
+                    <div class="panel panel-default tahoe-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">基础信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="point">
+                                <li>1 . 被诉案件：涉诉单位必须在收到起诉状<span class="colorRed">次日内</span>上报；并在<span class="colorRed">7个工作日内</span>完成律师聘请。</li>
+                                <li>2 . 主诉案件：涉诉单位必须在确定发起案件<span class="colorRed">7个工作日内</span>完成涉诉事件上报和律师聘请。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--订单管理-->
+                    <div class="panel panel-default tahoe-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">订单管理</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-tahoe">
+                                <div class="form-group double">
+                                    <label class="control-label">案件类别<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <select class="form-control" name="" id="">
+                                            <option value="第一行" selected>第一行</option>
+                                            <option value="第二行">第二行</option>
+                                            <option value="第三行">第三行</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">案由类别<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <select class="form-control" name="" id="">
+                                            <option value="第一行" selected>第一行</option>
+                                            <option value="第二行">第二行</option>
+                                            <option value="第三行">第三行</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">诉讼身份<span class="star">*</span></label>
+                                    <div class="form-input h24">
+                                        <label class="customControl"><input type="radio" name="SuSongShenFen"><span></span>原告</label>
+                                        <label class="customControl"><input type="radio" name="SuSongShenFen"><span></span>被告</label>
+                                        <label class="customControl"><input type="radio" name="SuSongShenFen"><span></span>第三人</label>
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">原告</label>
+                                    <div class="form-input w70">
+                                        <input type="text" class="form-control" readonly data-toggle="modal" data-target="#YuanGao">
+                                        <button type="button" class="btn btn-default btn-defined chooseBtn ml10" data-toggle="modal" data-target="#YuanGao_btn">集采商</button>
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">被告<span class="star">*</span></label>
+                                    <div class="form-input w70">
+                                        <input type="text" class="form-control" readonly data-toggle="modal" data-target="#BeiGao">
+                                        <button type="button" class="btn btn-default btn-defined chooseBtn ml10" data-toggle="modal" data-target="#BeiGao_btn">集采商</button>
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">第三人<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">案件级别<span class="star">*</span></label>
+                                    <div class="form-input w70">
+                                        <select class="form-control" name="" id="">
+                                            <option value="第一行" selected>第一行</option>
+                                            <option value="第二行">第二行</option>
+                                            <option value="第三行">第三行</option>
+                                        </select>
+                                        <button type="button" class="btn btn-default btn-defined chooseBtn ml10" data-toggle="modal" data-target="#AnJianJiBie_btn">说明</button>
+                                    </div>
+                                </div>
+                                <div class="form-group double">
+                                    <label class="control-label">涉案法务对接人<span class="star">*</span></label>
+                                    <div class="form-input w50">
+                                        <input type="text" class="form-control" readonly data-toggle="modal" data-target="#SheAnFaWuDuiJieRen">
+                                        <button type="button" class="btn btn-default btn-defined chooseBtn ml10" data-toggle="modal" data-target="#SheAnFaWuDuiJieRen_btn">法务对接人参考</button>
+                                    </div>
+                                </div>
+                                <div class="form-group  single">
+                                    <label class="control-label">管辖法院<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group single">
+                                    <label class="control-label">争议金额<span class="star">*</span></label>
+                                    <div class="form-input money">
+                                            <span>￥&nbsp;</span><input type="number" class="form-control"><span>&nbsp;万元</span>
+                                            <p class="inline_block font10px colorRed">注：在案件不涉及争议金额时填0，但需要在案件说明中说明情况。</p>
+                                    </div>
+                                </div>
+                                <div class="form-group single">
+                                    <label class="control-label">案件说明</label>
+                                    <div class="form-input">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group single">
+                                    <label class="control-label">初步处理意见<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group single">
+                                    <label class="control-label"></label>
+                                    <div class="form-input pb5">
+                                        <div class="panel-hd-btns pr">
+                                            <input type="file" class="fileBtn">
+                                            <button class="btn btn-tahoe"><img src="Content/Images/common/hook.png"><span class="vm">上传附件</span></button>
+                                            <p class="inline_block font10px colorRed">注：每个文件的大小应控制在30M内。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group single">
+                                    <label class="control-label">起诉状到达日期<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <input type="text" class="form-control bs-timepicker" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group single">
+                                    <label class="control-label">起诉状<span class="star">*</span></label>
+                                    <div class="form-input">
+                                        <div class="panel panel-default tahoe-panel">
+                                            <!-- table begin -->
+                                            <table class="table table-condensed table-dynamic bbim1 tc">
+                                                <thead class="tc">
+                                                    <tr>
+                                                        <th width="10%" class="">类型</th>
+                                                        <th width="30%" class="">文件名</th>
+                                                        <th width="30%" class="">上传进度</th>
+                                                        <th width="30%" class="">操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>...</td>
+                                                        <td><a href="#">123.png</a></td>
+                                                        <td>100%</td>
+                                                        <td><a href="javascript:void(0);">移除</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>doc</td>
+                                                        <td><a href="#">123.doc</a></td>
+                                                        <td>100%</td>
+                                                        <td><a href="javascript:void(0);">移除</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- table end -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group single">
+                                    <label class="control-label">起诉状到达时间证明材料</label>
+                                    <div class="form-input">
+                                        <div class="panel panel-default tahoe-panel">
+                                            <!-- table begin -->
+                                            <table class="table table-condensed table-dynamic bbim1 tc">
+                                                <thead class="tc">
+                                                <tr>
+                                                    <th width="10%" class="">类型</th>
+                                                    <th width="30%" class="">文件名</th>
+                                                    <th width="30%" class="">上传进度</th>
+                                                    <th width="30%" class="">操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>...</td>
+                                                    <td><a href="#">123.png</a></td>
+                                                    <td>100%</td>
+                                                    <td><a href="javascript:void(0);">移除</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>doc</td>
+                                                    <td><a href="#">123.doc</a></td>
+                                                    <td>100%</td>
+                                                    <td><a href="javascript:void(0);">移除</a></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- table end -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group single">
+                                    <label class="control-label">附件</label>
+                                    <div class="form-input">
+                                        <div class="panel panel-default tahoe-panel">
+                                            <!-- table begin -->
+                                            <table class="table table-condensed table-dynamic bbim1 tc">
+                                                <thead class="tc">
+                                                <tr>
+                                                    <th width="10%" class="">类型</th>
+                                                    <th width="30%" class="">文件名</th>
+                                                    <th width="30%" class="">上传进度</th>
+                                                    <th width="30%" class="">操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>...</td>
+                                                    <td><a href="#">123.png</a></td>
+                                                    <td>100%</td>
+                                                    <td><a href="javascript:void(0);">移除</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>doc</td>
+                                                    <td><a href="#">123.doc</a></td>
+                                                    <td>100%</td>
+                                                    <td><a href="javascript:void(0);">移除</a></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- table end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit-section pb20">
+                            <button type="submit" class="btn submitBtn mr100" onclick="">提交</button>
+                            <button type="button" class="btn submitBtn">保存</button>
+                        </div>
+                        </div>
+
+                <!--这是右侧主要内容 end-->
+			        </div>
+
+
+                </div>
+
+                <!--页面弹出框样式：modal Section  begin-->
+                <div class="col-md-12 modalSec">
+                <!-- Modal Begin-->
+                <!--涉案单位 start-->
+                    <div class="modal fade  modal-tahoe" id="SheAnDanWei">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">选择组织</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="orgTree" class="ztree"></div>
+                                </div>
+                                <div class="modal-footer tc">
+                                    <button type="button" class="btn btn-danger mr20">确定</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--涉案单位 end-->
+
+                    <!--原告 start-->
+                    <div class="modal fade  modal-tahoe" id="YuanGao">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">选择公司</h4>
+                                </div>
+                                <div class="panel-body p20">
+                                    <div class="single">
+                                        <div class="col-md-2 lh24">公司名称/拼音 :</div>
+                                        <div class="searchBox col-md-6">
+                                            <div class="row">
+                                                <input type="text" class="form-control searchIpt" placeholder="请输入查找内容">
+                                                <button class="searchSmt" type="submit"></button>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger chooseBtn ml20">清空</button>
+                                    </div>
+                                </div>
+                                <div class="modal-body table-parent">
+                                    <table class="table table-striped-chg table-tahoe table-condensed table-narrow-min m0Im">
+                                        <thead>
+                                        <tr>
+                                            <th width="5%"></th>
+                                            <th width="5%" class="tc">序号</th>
+                                            <th width="60%" class="">公司名称</th>
+                                            <th width="30%" class="">公司编号</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">1</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">2</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">3</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">4</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">5</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">6</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">7</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">8</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">9</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="customControl">
+                                                        <input type="radio" name="YuanGao">
+                                                        <span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="tc">10</td>
+                                                <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="pageIniation">
+                                        <div class="col-md-5 col-xs-5 pageLeft">
+                                            <div class="row">
+                                                <span class="mr20">显示第 1 到第 10 条记录，总共55条记录</span>
+                                                <a href="javascript:void(0);">刷新</a>
+                                            </div>
+                                        </div>
+                                        <div class="pageRight col-md-7 col-xs-7 tr">
+                                            <div class="row">
+                                                <ul class="list-unstyled f0">
+                                                    <li>&lt;</li>
+                                                    <li>9999</li>
+                                                    <li class="colorRed">9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>......</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>&gt;</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer tc">
+                                    <button type="button" class="btn btn-danger mr20">确定</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--原告 end-->
+
+                    <!--原告——集采商 start-->
+                    <div class="modal fade  modal-tahoe" id="YuanGao_btn">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">集采商查询</h4>
+                                </div>
+                                <div class="panel-body p20">
+                                    <div class="single">
+                                        <div class="col-md-2 lh24">集采商查询 :</div>
+                                        <div class="searchBox col-md-6">
+                                            <div class="row">
+                                                <input type="text" class="form-control searchIpt" placeholder="请输入查找内容">
+                                                <button class="searchSmt" type="submit"></button>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger chooseBtn ml20">查询</button>
+                                        <button type="button" class="btn btn-danger chooseBtn ml20">清空</button>
+                                    </div>
+                                </div>
+                                <div class="modal-body table-parent">
+                                    <table class="table table-striped-chg table-tahoe table-condensed table-narrow-min m0Im">
+                                        <thead class="tc">
+                                        <tr>
+                                            <th width="7%" class="">序号</th>
+                                            <th width="35%" class="">集采商名称</th>
+                                            <th width="14%" class="">法定代表人</th>
+                                            <th width="23%" class="">营业执照注册号</th>
+                                            <th width="23%" class="">组织机构代码证号</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">1</td>
+                                            <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="tc">郭敏华</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="pageIniation">
+                                        <div class="col-md-5 col-xs-5 pageLeft">
+                                            <div class="row">
+                                                <span class="mr20">显示第 1 到第 10 条记录，总共55条记录</span>
+                                                <a href="javascript:void(0);">刷新</a>
+                                            </div>
+                                        </div>
+                                        <div class="pageRight col-md-7 col-xs-7 tr">
+                                            <div class="row">
+                                                <ul class="list-unstyled f0">
+                                                    <li>&lt;</li>
+                                                    <li>9999</li>
+                                                    <li class="colorRed">9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>......</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>&gt;</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--原告——集采商 end-->
+
+                    <!--被告 start-->
+                    <div class="modal fade  modal-tahoe" id="BeiGao">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">选择公司</h4>
+                                </div>
+                                <div class="panel-body p20">
+                                    <div class="single">
+                                        <div class="col-md-2 lh24">公司名称/拼音 :</div>
+                                        <div class="searchBox col-md-6">
+                                            <div class="row">
+                                                <input type="text" class="form-control searchIpt" placeholder="请输入查找内容">
+                                                <button class="searchSmt" type="submit"></button>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger chooseBtn ml20">清空</button>
+                                    </div>
+                                </div>
+                                <div class="modal-body table-parent">
+                                    <table class="table table-striped-chg table-tahoe table-condensed table-narrow-min m0Im">
+                                        <thead>
+                                        <tr>
+                                            <th width="5%"></th>
+                                            <th width="5%" class="tc">序号</th>
+                                            <th width="60%" class="">公司名称</th>
+                                            <th width="30%" class="">公司编号</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">1</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">2</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">3</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">4</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">5</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">6</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">7</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">8</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">9</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="customControl">
+                                                    <input type="radio" name="YuanGao">
+                                                    <span></span>
+                                                </label>
+                                            </td>
+                                            <td class="tc">10</td>
+                                            <td class="">测试诉讼二审案件数据好多数据来着</td>
+                                            <td class="">91441303MA4WGA5P4Y</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="pageIniation">
+                                        <div class="col-md-5 col-xs-5 pageLeft">
+                                            <div class="row">
+                                                <span class="mr20">显示第 1 到第 10 条记录，总共55条记录</span>
+                                                <a href="javascript:void(0);">刷新</a>
+                                            </div>
+                                        </div>
+                                        <div class="pageRight col-md-7 col-xs-7 tr">
+                                            <div class="row">
+                                                <ul class="list-unstyled f0">
+                                                    <li>&lt;</li>
+                                                    <li>9999</li>
+                                                    <li class="colorRed">9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>......</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>&gt;</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer tc">
+                                    <button type="button" class="btn btn-danger mr20">确定</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--被告 end-->
+
+                    <!--被告——集采商 start-->
+                    <div class="modal fade  modal-tahoe" id="BeiGao_btn">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">集采商查询</h4>
+                                </div>
+                                <div class="panel-body p20">
+                                    <div class="single">
+                                        <div class="col-md-2 lh24">集采商查询 :</div>
+                                        <div class="searchBox col-md-6">
+                                            <div class="row">
+                                                <input type="text" class="form-control searchIpt" placeholder="请输入查找内容">
+                                                <button class="searchSmt" type="submit"></button>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger chooseBtn ml20">查询</button>
+                                        <button type="button" class="btn btn-danger chooseBtn ml20">清空</button>
+                                    </div>
+                                </div>
+                                <div class="modal-body table-parent">
+                                    <table class="table table-striped-chg table-tahoe table-condensed table-narrow-min m0Im">
+                                        <thead class="tc">
+                                            <tr>
+                                                <th width="7%" class="">序号</th>
+                                                <th width="35%" class="">集采商名称</th>
+                                                <th width="14%" class="">法定代表人</th>
+                                                <th width="23%" class="">营业执照注册号</th>
+                                                <th width="23%" class="">组织机构代码证号</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tc">1</td>
+                                                <td class="tc">测试诉讼二审案件数据好多数据来着</td>
+                                                <td class="tc">郭敏华</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                                <td class="">91441303MA4WGA5P4Y</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="pageIniation">
+                                        <div class="col-md-5 col-xs-5 pageLeft">
+                                            <div class="row">
+                                                <span class="mr20">显示第 1 到第 10 条记录，总共55条记录</span>
+                                                <a href="javascript:void(0);">刷新</a>
+                                            </div>
+                                        </div>
+                                        <div class="pageRight col-md-7 col-xs-7 tr">
+                                            <div class="row">
+                                                <ul class="list-unstyled f0">
+                                                    <li>&lt;</li>
+                                                    <li>9999</li>
+                                                    <li class="colorRed">9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>......</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>9999</li>
+                                                    <li>&gt;</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--被告——集采商 end-->
+
+                    <!--案件级别——说明 start-->
+                    <div class="modal fade  modal-tahoe" id="AnJianJiBie_btn">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">说明</h4>
+                                </div>
+                                <div class="modal-body f14">
+                                    （一）诉讼案件分为重大诉讼案件和一般诉讼案件两类，其中重大诉讼案件包括：<br>
+                                    1、规模在十人（含）以上的群体案件，或可能引发群体事件的具有示范效应的案件；<br>
+                                    2、涉及华夏幸福声誉的案件；<br>
+                                    3、涉及知识产权的案件；<br>
+                                    4、涉及政府（含具有政府背景的单位）的案件；<br>
+                                    5、涉外案件；<br>
+                                    <label class="colorRed">6、诉讼标的额超500万元（含）以上的诉讼案件【新变更】；</label><br>
+                                    7、发起人所在公司负责人认为影响严重、案情复杂，需要以重大案件程序进行汇报和审批的其他案件。<br>
+                                    重大诉讼案件外的其他诉讼案件为一般诉讼案件。<br>
+                                    （二）总部法务部统筹负责公司涉及的全部诉讼案件的处理。目前，暂将涉及住宅集团的一般诉讼案件授权住宅集团法务部处理。<br>
+                                </div>
+                                <div class="modal-footer tc">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--案件级别——说明 end-->
+
+                    <!--涉案法务对接人 start-->
+                    <div class="modal fade  modal-tahoe" id="SheAnFaWuDuiJieRen">
+                        <div class="modal-dialog overhidden" role="document" style="width:1046px;">
+
+                            <div class="panel panel-default tahoe-panel w300 h500 fl">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">组织结构</h3>
+                                </div>
+                                <div class="panel-body">
+
+                                </div>
+                            </div>
+
+                            <div class="h500 fr" style="width:736px;">
+                                <div class="panel panel-default tahoe-panel single" style="height:64px;margin-bottom:8px;">
+                                    <div class="panel-body">
+                                        <div class="searchBox w300">
+                                            <input type="text" class="form-control searchIpt" placeholder="请输入查找内容">
+                                            <button class="searchSmt" type="submit"></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default tahoe-panel fl" style="width:363px;height: 428px;">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">人员列表</h3>
+                                    </div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default tahoe-panel fr" style="width:363px;height: 428px;">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">已选列表</h3>
+                                    </div>
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default tahoe-panel clearBoth">
+                                <div class="modal-footer tc" style="border: none;padding: 20px;">
+                                    <button type="button" class="btn btn-danger mr20">确定</button>
+                                    <button type="button" disabled class="btn btn-default mr20">重置</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--涉案法务对接人 end-->
+
+                    <!--涉案法务对接人——法务对接人参考 start-->
+                    <div class="modal fade  modal-tahoe" id="SheAnFaWuDuiJieRen_btn">
+                        <div class="modal-dialog w800" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">选择公司</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                </div>
+                                <div class="modal-footer tc">
+                                    <button type="button" class="btn btn-danger mr20">确定</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--涉案法务对接人——法务对接人参考 end-->
+                </div>
+                <!--页面弹出框样式：modal Section  begin-->
+
+            </div>
+		</div>
+		<script src="Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+        <script src="Scripts/ztree/jquery.ztree.core.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="Scripts/ztree/jquery.ztree.excheck.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="Scripts/bScroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            $(function(){
+
+//                调用时间插件；
+                $(".bs-timepicker").datetimepicker({
+                    language:  'zh',
+//                    format: 'yyyy-mm-dd hh:ii',//调用年月日时分 打开
+
+                    format: 'yyyy-mm-dd',//调用年月日 打开
+                    minView : 2,//调用年月日 打开
+
+//                    format: 'hh:ii',//调用时分 打开
+//                    startView:1,//调用时分 打开
+
+                    todayBtn : true,
+                    autoclose:true
+                });
+
+                $('.toggle-nav').click(function(){
+                    $('.left-menu').toggleClass('little');
+                    $('.rightMain').toggleClass('large');
+                });
+
+                $('.modal .modal-body.table-parent > .table tr').on('click',function(){
+                    $(this).find('.customControl>input').prop('checked',true);
+                });
+
+                $('#SheAnFaWuDuiJieRen').modal('show');
+
+
+                //第1棵树；
+                var setting={};
+                var zNodes =[
+                    { name:"选择模板",
+                        open:true,
+                        iconSkin:"pIconfolder",
+                        children: [
+                            {     name:"集团总部",
+                                open:true,
+                                iconSkin:"pIconfolder",
+                                children: [
+                                    {  name:"业务流程",
+                                        iconSkin:"pIconfolder",
+                                        children:[
+                                            {name:"行政管理",iconSkin:"iconfile"},
+                                            {name:"信息管理",iconSkin:"iconfile"}
+                                        ]
+                                    },
+                                    {    name:"个人事务",
+                                        iconSkin:"pIconfolder",
+                                        children:[
+                                            {name:"测试",iconSkin:"iconfile"}
+                                        ]
+                                    },
+                                    { name:"请示报告",iconSkin:"iconfile"}
+                                ]},
+                            { name:"地产板块",
+                                iconSkin:"pIconfolder",
+                                children: [
+                                    { name:"北京区域",
+                                        iconSkin:"pIconfolder",
+                                        children:[
+                                            {name:"区域流程",iconSkin:"iconfile"},
+                                            {name:"太原地区",iconSkin:"iconfile"}
+                                        ]
+                                    }
+                                ]},
+                            { name:"酒店集团",
+                                iconSkin:"pIconfolder",
+                                children:[
+                                    { name:"业务事业部",
+                                        iconSkin:"pIconfolder",
+                                        children:[
+                                            {name:"TEST",iconSkin:"iconfile"},
+                                            {name:"太原地区",iconSkin:"iconfile"}
+                                        ]
+                                    }
+                                ]}
+                        ]}
+                ];
+                $.fn.zTree.init($("#orgTree"), setting, zNodes);
+            });
+		</script>
+	</body>
+
+</html>

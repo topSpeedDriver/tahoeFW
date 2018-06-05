@@ -1,0 +1,722 @@
+@charset "utf-8";
+html,body{
+    height:100%;
+}
+body {
+	background-color: #F5F5F5;
+	font-size: 12px;
+    color: #4a4a4a;
+	font-family: "microsoft yahei", "微软雅黑";
+}
+
+/*全部内容容器*/
+.container-fluid{
+	position: relative;
+    padding-top: 67px;
+	min-width: 1280px;
+    height: 100%;
+	overflow: hidden;
+	background-color: #f5f5f5;
+	min-height: 100px;
+}
+.container-fluid > .row{
+    height:100%;
+}
+
+/* 头部 header start*/
+.header {
+    position: absolute;
+    top:0;
+    left:0;
+	height: 67px;
+    width:100%;
+    padding:17px 0 17px 20px;
+    background: url(../Images/common/header_bg_img.png) no-repeat center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+	box-shadow: 0 1px 15px -3px #767676;
+    z-index: 10;
+}
+.header > div{
+    height: 100%;
+}
+.header .logoImg{
+    height:33px;
+}
+.header .topic {
+	font-weight: bold;
+	font-size: 24px;
+	color: #b5b5b5;
+	margin-left: 81px;
+    vertical-align: middle;
+}
+.header .login {
+    padding-top: 12px;
+    padding-right: 35px;
+    height:31px;
+	text-align: right;
+    line-height: 19px;
+}
+.header .login .dropdown-toggle{
+    font-size: 14px;
+    font-weight: bold;
+    color: #c7151d;
+}
+.header .login .dropdown-menu{
+    right: 20px;
+    left: auto;
+    min-width: 110px;
+}
+.header .login .dropdown-menu li{
+    padding-left: 15px;
+}
+.header .login .dropdown-menu a{
+    display: inline-block;
+}
+/*header end*/
+
+/*左侧菜单 left-menu start*/
+.left-menu{
+    position: relative;
+    height:100%;
+    min-height: 659px;
+    width: 240px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 2px 0 5px -2px #767676;
+}
+.left-menu .nav-title{
+    position: relative;
+    padding: 30px 20px 30px 0;
+    margin-left: 20px;
+    border-bottom:1px solid #f0f0f0;
+}
+.left-menu .nav-title h6{
+    line-height: 20px;
+    font-weight: bold;
+    font-size:16px;
+}
+.left-menu .nav-title > span{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 20px;
+    margin: auto 0;
+    width:16px;
+    height:16px;
+    background: url("../Images/common/toggleNav.png");
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+.left-menu > ul > li{
+    position: relative;
+    height:50px;
+    padding-left: 20px;
+    line-height: 50px;
+    font-size:14px;
+    border-left-width:2px;
+    border-left-style: solid;
+    border-color: transparent;
+}
+.left-menu > ul > li a{
+    color: #030303;
+    display: block;
+}
+.left-menu > ul > li span{
+    padding-right: 13px;
+}
+.left-menu > ul > li i{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 20px;
+    margin:auto;
+    width: 6px;
+    height: 9.2px;
+    background-image: url("../Images/common/nextChild.png");
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+
+.left-menu ul.childUl{
+    display: none;
+    position: absolute;
+    top:0;
+    left:238px;
+    width: 150px;
+    background-color: #f5f5f5;
+    box-shadow: 2px 0 5px -2px #767676;
+}
+.left-menu ul.childUl > li{
+    position: relative;
+}
+.left-menu ul.childUl > li a{
+    padding-left: 10px;
+    padding-right: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/*hover*/
+.left-menu > ul > li.active{
+    border-color: #e63f3c;
+    background-color: #fff5f5;
+}
+.left-menu > ul > li:hover{
+    background-color: #f5f5f5;
+}
+.left-menu > ul > li:hover > ul.childUl{
+    display: block;
+}
+.left-menu > ul li.active > a > i{
+    background-image: url("../Images/common/nextChild_active.png");
+}
+.left-menu > ul > li a:hover{
+    text-decoration: none;
+}
+.left-menu li.active > a{
+    color: #e63f3c;
+}
+.left-menu ul.childUl > li:hover{
+    background-color: #e6e6e6;
+}
+.left-menu .toggle-nav{
+    position: absolute;
+    width:7px;
+    height: 40px;
+    background-image: url("../Images/common/fold.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    right: -7px;
+    top: 490px;
+}
+
+
+/*折叠后*/
+.left-menu.little{
+    width:50px;
+}
+.left-menu.little .nav-title{
+    padding: 30px 0;
+}
+.left-menu.little .nav-title h6{
+    display: none;
+}
+.left-menu.little > ul > li{
+    padding-left: 17px;
+}
+.left-menu.little > ul > li > a{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+.left-menu.little > ul > li > a > i{
+    display: none;
+}
+.left-menu.little ul.childUl{
+    left:48px;
+}
+.left-menu.little .toggle-nav{
+    background-image: url("../Images/common/fold2.png");
+}
+/*left-menu end*/
+
+/*rightMain start*/
+.rightMain{
+    height:100%;
+    overflow: auto;
+    float: right;
+    padding: 0 20px;
+    width:calc(100% - 240px);
+}
+.rightMain > div{
+    padding-bottom: 10px;
+}
+.rightMain.large{
+    width:calc(100% - 50px);
+}
+.breadcrumb{
+    padding: 15px 0;
+    margin-bottom: 0;
+    color: #030303;
+    font-size: 14px;
+}
+.breadcrumb a{
+    color: #030303;
+}
+.breadcrumb a:hover{
+    color: #e63f3c;
+}
+/*rightMain end*/
+
+.form-tahoe{
+    overflow: hidden;
+}
+
+/*bootstrap 样式改*/
+input[type=number].form-control{
+    display: inline-block;
+    width: 108px;
+    text-align: right;
+}
+.tahoe-panel {
+    border: none;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.panel-default > .panel-heading {
+    background-color: #fff;
+    border-color:#f0f0f0;
+    padding: 15px 13px;
+}
+.panel-title{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    color: #4a4a4a;
+    border-left: 2px solid #E63F3C;
+    padding-left: 5px;
+    display: inline-block;
+}
+.tahoe-panel .panel-body{
+    padding:20px 46px 1px 20px;
+}
+.form-tahoe .form-group {
+    float: left;
+    margin-bottom: 10px;
+}
+.form-tahoe .form-group.special {
+    margin-bottom: 15px;
+}
+.form-group .point{
+    clear: both;
+    padding-left: 8%;
+}
+.form-group .point p{
+    font-weight:bold;
+    color: #000;
+    -webkit-transform:scale(.833) translateX(-10%);
+    -moz-transform:scale(.833) translateX(-10%);
+    -ms-transform:scale(.833) translateX(-10%);
+    -o-transform:scale(.833) translateX(-10%);
+    transform:scale(.833) translateX(-10%);
+}
+.form-group .point span{
+    font-weight: normal;
+}
+.single{width:100%;overflow:hidden;}
+.double{width:50%;overflow:hidden;}
+.quadruple{width:25%;overflow:hidden;}
+.single > label,
+.double > label,
+.quadruple > label{
+    float:left;
+    height:24px;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.single .form-input,
+.double .form-input,
+.quadruple .form-input{
+    float:left;
+}
+.single .form-control,
+.double .form-control,
+.quadruple .form-control{
+    display: inline-block;
+    width:100%;
+    height: 24px;
+    line-height: 22px;
+    padding: 0 10px;
+    font-size: 12px;
+    box-shadow: none;
+    color: #4a4a4a;
+    vertical-align: middle;
+}
+.single textarea.form-control,
+.double textarea.form-control,
+.quadruple textarea.form-control{
+    height: auto;
+}
+.single .form-input p.form-control,
+.double .form-input p.form-control,
+.quadruple .form-input p.form-control{
+    border:none;
+    color: #4a4a4a;
+}
+.single > label{width:12%;}
+.single .form-input{width:88%;}
+.double > label{width:30%;}
+.double:nth-of-type(odd) > label{width:24%;}
+.double .form-input{width:70%;}
+.double:nth-of-type(odd) .form-input{width:76%;}
+.quadruple > label{width:40%;}
+.quadruple .form-input{width:60%;}
+.quadruple:nth-of-type(4n+1) > label{width:35%;}
+.quadruple:nth-of-type(4n+1) .form-input{width:65%;}
+.single.special > label{width:8%;}
+.single.special .form-input{width:92%;}
+.double.special > label{width:16%;}
+.double.special .form-input{width:84%}
+
+.panel-body > ul.point{
+    padding:0 5px 10px 5px;
+}
+.panel-body > ul.point li{
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*bootstrap 样式改 end*/
+
+
+
+/*input[type=number]带文字 start*/
+.form-input.money span{
+    font-weight:bold;
+}
+/*input[type=number]带文字 end*/
+
+
+
+
+/*按钮*/
+.btn-tahoe {
+    width: 100px;
+    height: 28px;
+    background: #fff;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+    color: #000;
+}
+.btn-tahoe.w70{
+    height: 20px;
+    margin-top:1px;
+    margin-bottom: 3px;
+    width: 76px;
+    color: #e63f3c;
+}
+.btn.btn-tahoe:hover {
+    box-shadow: 0 1px 6px 0 rgba(230,63,60,.4);
+}
+.panel-hd-btns .btn-tahoe,
+.th_btn .btn-tahoe {
+    width: 90px;
+    height: 22px;
+    color: #E63F3C;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.btn-tahoe img{
+    width: 12px;
+    margin-right: 6px;
+}
+.submit-section{
+    text-align: center;
+}
+.submitBtn {
+    display: inline-block;
+    height: 22px;
+    line-height: 20px;
+    width: 76px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    padding: 0;
+    background-color: #e63f3c;
+}
+.submitBtn:hover{
+    color: #fff;
+}
+.chooseBtn {
+    height: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 22px;
+    vertical-align: top;
+}
+.btn-defined{
+    background: #fff !important;
+    color: #e63f3c !important;
+}
+/*按钮样式 end*/
+
+/*带 btn 的 form-control start*/
+.form-input.w70 > .form-control{
+    float: left;
+    width:calc(100% - 80px);
+}
+.form-input.w70 > .btn-defined{
+    width: 70px;
+    text-align: center;
+}
+.form-input.w60 > .form-control{
+    float: left;
+    width:calc(100% - 110px);
+}
+.form-input.w60 > .btn-defined{
+    width: 100px;
+    text-align: center;
+}
+.form-input.w50 > .form-control{
+    float: left;
+    width:calc(100% - 150px);
+}
+.form-input.w50 > .btn-defined{
+    width: 140px;
+    text-align: center;
+}
+/*带 btn 的 form-control end*/
+
+/*检索框样式 带放大镜 start*/
+.searchBox{
+    position: relative;
+    display:inline-block;
+    min-width: 300px;
+    height: 24px;
+}
+.searchBox .searchIpt{
+    width:100%;
+    height: 24px;
+    padding: 0 25px 0 5px;
+    line-height: 22px;
+    font-size: 12px;
+}
+.searchBox .searchSmt{
+    position: absolute;
+    border:none;
+    top:1px;
+    right:0;
+    width:22px;
+    height: 22px;
+    background: url("../Images/common/search.png") no-repeat left;
+    background-size:14px 14px;
+    -moz-background-size:14px 14px;
+    -webkit-background-size:14px 14px;
+    -o-background-size:14px 14px;
+}
+/*检索框样式 带放大镜 end*/
+
+/*表格样式*/
+.table.table-dynamic {
+    border-top: 1px solid #e7ecf1;
+}
+.table.table-dynamic thead>tr>th {
+    background: #f5f7fa;
+}
+.table.bbim1 th{
+    border-bottom-width:1px !important;
+}
+thead.tc th{
+    text-align: center;
+}
+
+
+/*table-tahoe*/
+.table>tbody>tr>td{
+    word-break: break-all;
+}
+.table-tahoe {
+    table-layout: fixed;
+}
+.table-tahoe.table>thead>tr>th {
+    padding: 6px 5px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #F5F7FA;
+    background-color: #F5F7FA;
+}
+.table-tahoe.table>tbody>tr>td {
+    border-top: 1px solid white;
+    word-break: break-all;
+}
+.table-tahoe.table .form-control {
+    height: 24px;
+    padding: 0 12px;
+    box-shadow: none;
+}
+.table-tahoe.table .form-control.fakeIpt{
+    height: 24px;
+    line-height:24px;
+    padding: 0 12px;
+    overflow: hidden;
+    background:#F5F5F5;
+}
+.table-tahoe.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #F5F7FA;
+}
+.table-tahoe.table-striped-chg>tbody>tr:nth-of-type(even) {
+    background-color: #F5F7FA;
+}
+.table-tahoe.tableLeftBg>tbody>tr>td:first-child {
+    background-color: #F5F7FA;
+}
+.table-tahoe.tableLeftBg>tbody>tr>td:first-child {
+    background-color: #F5F7FA;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.table-tahoe.tableLeftBg>tbody>tr:last-child>td:first-child {
+    border-bottom: none;
+}
+
+/*表格第一列和最后一列 padding start*/
+.table-tahoe.table-narrow>thead>tr>th:nth-child(1),
+.table-tahoe.table-narrow>tbody>tr>td:nth-child(1) {
+    padding-left: 30px;
+}
+.table-tahoe.table-narrow-min thead th:nth-child(1),
+.table-tahoe.table-narrow-min tbody tr td:nth-child(1) {
+    padding-left: 20px;
+}
+.table-tahoe.table-narrow-last thead th:nth-last-child(1),
+.table-tahoe.table-narrow-last tbody tr td:nth-last-child(1) {
+    padding-right: 50px;
+}
+.table-tahoe.table-narrow-last-min thead th:nth-last-child(1),
+.table-tahoe.table-narrow-last-min tbody tr td:nth-last-child(1) {
+    padding-right: 20px;
+}
+/*表格第一列和最后一列 padding end*/
+.table-tahoe.table-condensed-min>tbody>tr>th,
+.table-tahoe.table-condensed-min>tbody>tr>td{
+    padding:4px 5px;
+}
+/*.table-tahoe thead.tc>tr>th,*/
+/*.table-tahoe tbody.tc>tr>td{*/
+    /*text-align: center;*/
+/*}*/
+/*.table-tahoe thead.tc>tr>th.tl,*/
+/*.table-tahoe tbody.tc>tr>td.tl{*/
+    /*text-align: left;*/
+/*}*/
+.pageIniation {
+    font-size: 0;
+    overflow: hidden;
+}
+.pageIniation .pageLeft, .pageIniation .pageRight {
+    font-size: 14px;
+    display: inline-block;
+}
+.pageIniation .pageIpt {
+    width: 40px;
+    padding-left: 5px;
+    margin: 0 2px;
+    line-height: 18px;
+}
+.pageIniation .pageIpt:focus{
+    outline:none;
+}
+.pageRight li{
+    display: inline-block;
+    min-width:26px;
+    text-align: center;
+    cursor: pointer;
+    padding:0 3px;
+    font-size: 14px;
+}
+.pageRight li>strong{
+    color: #C7151D;
+    font-weight:normal;
+}
+.panel-body.table-parent,
+.modal-body.table-parent{
+    padding: 0;
+}
+/*表格样式 end*/
+
+/*弹窗*/
+.modal-tahoe .modal-header{
+    padding: 15px 13px;
+    position: relative;
+}
+.modal-tahoe .modal-header .close {
+    position: absolute;
+    top:16px;
+    right: 13px;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    border-radius: 8px;
+    background: url("../Images/common/modelClose.png") no-repeat;
+    background-size: 16px 16px;
+    -moz-background-size: 16px 16px;
+    -webkit-background-size: 16px 16px;
+    -o-background-size: 16px 16px;
+
+}
+.modal-tahoe .modal-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    color: #4a4a4a;
+    border-left: 2px solid #E63F3C;
+    padding-left: 5px;
+    display: inline-block;
+}
+.modal-tahoe .modal-body {
+    min-height: 95px;
+}
+.modal-tahoe .modal-footer .btn {
+    width: 100px;
+    height: 28px;
+    background: #E63F3C;
+    font-weight: bold;
+    padding: 0;
+    line-height: 28px;
+}
+/*弹窗 end*/
+
+
+/*ztree 样式修改 start*/
+.ztree li span.button.pIconfolder_ico_open{
+    background: url(zTreeStyle/img/diy/icon_foder.png) no-repeat scroll 0 0 transparent;
+    vertical-align:top;
+    background-size:contain;
+}
+.ztree li span.button.pIconfolder_ico_close{
+    background: url(zTreeStyle/img/diy/icon_foder.png) no-repeat scroll 0 0 transparent;
+    vertical-align:top;
+    background-size:contain;
+}
+.ztree li span.button.iconfile_ico_docu{
+    margin-right:2px;
+    background: url(zTreeStyle/img/diy/icon_file.png) no-repeat scroll 0 0 transparent;
+    vertical-align:top;
+    background-size:contain;
+}
+/*ztree 样式修改 end*/
+
+
+/*上箭头*/
+.caretUp {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}

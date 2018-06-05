@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>流程-流程地图</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css" />
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--这是头部-->
+				<header class="col-md-12 header">
+					<div class="col-md-10 left">
+						<img src="../img/commonImg/logo.png" />
+						<span class="topic">流程中心</span>
+					</div>
+					<div class="col-md-2  login">
+						<span>下午好，</span>
+						<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown1">
+							<li><i class="glyphicon glyphicon-log-out"></i>
+								<a href="/ekp/logout.jsp">退出</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+				<!--这是头部  end-->
+				<!--这是内容部分  begin-->
+				<div class="wrapper  pl20 pr20">
+					<!--左侧 固定宽300 面板-->
+					<div class="leftFloat section">
+						<!--普通的panel  左侧导航区域  leftLinkSec-->
+						<div class="panel panel-default tahoe-panel siderBarPanel">
+							<div class="panel-body  leftLinkSec p20">
+								<ul class="list-unstyled leftLinkUl">
+									<li>
+										<a class="navLink" href="流程-首页.html">
+											<img class="mr15" src="../img/commonImg/sidebar4.png" /> 所有申请
+										</a>
+									</li>
+									<li>
+										<a class="navLink" href="流程-首页.html">
+											<img class="mr15" src="../img/commonImg/sidebar1.png" /> 我创建的流程
+										</a>
+									</li>
+									<li>
+										<a class="navLink checked" href="流程-流程地图-.html">
+											<img class="mr15" src="../img/commonImg/sidebar2.png" /> 流程地图
+										</a>
+									</li>
+									<li>
+										<a class="navLink" href="javascript:void(0);">
+											<img class="mr15" src="../img/commonImg/sidebar3.png" /> 我的委托
+										</a>
+									</li>
+									<li>
+										<a class="navLink" href="javascript:void(0);">
+											<img class="mr15" src="../img/commonImg/sidebar4.png" /> 管理员操作
+										</a>
+									</li>
+								</ul>
+								<div class="siderBarToggle pa">
+									 <img src="../img/commonImg/icon_toLeft.gif"  onclick="closeLeftBar()"/>
+									 <img src="../img/commonImg/icon_toRight.gif" onclick="openLeftBar()"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--左侧  end-->
+					<!--右侧自适应-面板-->
+					<div class="rightMain section">
+						<!--普通的panel  第一组-->
+						<div class="level-Wrap">
+							<h2 class="level-hd-lg">总部</h2>
+							<div class="panel panel-default tahoe-panel  level-panel">
+								<ul class="list-unstyled">
+									<li class="level-md">
+										<h3 class="level-hd-md">合同流程</h3>
+										<ol class="list-unstyled f0">
+											<li  class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">设计类合同设计类合同设计类合同(3)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">付款流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">营销类合同营销类合同营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同营销类合同营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">招标流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">业务流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+										</ol>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--普通的panel 第二组-->
+						<div class="level-Wrap">
+							<h2 class="level-hd-lg">地产板块</h2>
+							<div class="panel panel-default tahoe-panel  level-panel">
+								<ul class="list-unstyled">
+									<li class="level-md">
+										<h3 class="level-hd-md">区域流程</h3>
+										<ol class="list-unstyled f0">
+											<li  class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">城市公司流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同营销类合同营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同营销类合同营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">业务流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">项目部流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+										</ol>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--普通的panel 第三组-->
+						<div class="level-Wrap">
+							<h2 class="level-hd-lg">教育板块</h2>
+							<div class="panel panel-default tahoe-panel  level-panel">
+								<ul class="list-unstyled">
+									<li class="level-md">
+										<h3 class="level-hd-md">区域流程</h3>
+										<ol class="list-unstyled f0">
+											<li  class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li  class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">城市公司流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同营销类合同营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同营销类合同营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">项目部流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">人力资源类合同(4)</a></li>
+										</ol>
+									</li>
+									<li class="level-md">
+										<h3 class="level-hd-md">业务流程</h3>
+										<ol class="list-unstyled f0">
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">营销类合同(5)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">信息类合同(8)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">设计类合同(3)</a></li>
+											<li class="level-item"><a href="javascript:void(0);">财务类合同(2)</a></li>
+										</ol>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				handleSiderBarH();
+			})
+			
+//			//左侧边栏折叠；
+//			function closeLeftBar(){
+//				var isIE=browserInfo.versions.trident;
+//				if(isIE){
+//					$(".leftFloat").Css({"width":"1px","padding-left":0});
+//					$(".leftLinkUl").addClass("none");
+//					$(".rightMain").Css("width","99%");
+//				}else{
+//					$(".leftFloat").Css({"width":0,"padding-left":0});
+//					$(".leftLinkUl").addClass("none");
+//					$(".rightMain").Css("width","100%");
+//				}
+//			}
+//			//左侧边栏打开；
+//			function openLeftBar(){
+//				$(".leftFloat").Css("width","240px");
+//				$(".leftLinkUl").removeClass("none");
+//				var rightWidth=$(".wrapper").Css("width");
+//				$(".rightMain").Css("width",parseInt(rightWidth)-240);
+//			}
+//			//处理左侧高度；
+//			function handleSiderBarH() {
+//				var rightH = $(".rightMain").Css("height");
+//				var siderBarH=parseInt(rightH)-10;
+//				$(".leftFloat .siderBarPanel").Css("height", siderBarH);
+//			};
+		</script>
+	</body>
+</html>

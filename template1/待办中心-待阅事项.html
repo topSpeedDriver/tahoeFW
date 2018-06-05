@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>待办中心-待阅</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css" />
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--这是头部-->
+				<header class="col-md-12 header">
+					<div class="col-md-10 left">
+						<img src="../img/commonImg/logo.png" />
+						<span class="topic">待办中心</span>
+					</div>
+					<div class="col-md-2  login">
+						<span>下午好，</span>
+						<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown1">
+							<li><i class="glyphicon glyphicon-log-out"></i>
+								<a href="/ekp/logout.jsp">退出</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+				<!--这是头部  end-->
+				<!--这是内容部分  begin-->
+				<div class="wrapper  pl20 pr20">
+					<!--左侧 固定宽240 面板-->
+					<div class="leftFloat section">
+						<!--普通的panel  左侧导航区域  leftLinkSec-->
+						<div class="panel panel-default tahoe-panel siderBarPanel">
+							<div class="panel-body  leftLinkSec p20">
+								<ul class="list-unstyled leftLinkUl">
+									<li>
+										<a class="navLink" href="待办中心-首页.html">
+											<img class="mr15" src="../img/commonImg/sidebar1.png"/>待办事项
+										</a>
+									</li>
+									<li>
+										<a class="navLink checked" href="待办中心-待阅事项.html">
+											<img class="mr15" src="../img/commonImg/sidebar2.png"/>待阅事项
+										</a>
+									</li>
+									<li>
+										<a class="navLink" href="待办中心-已办已阅.html">
+											<img class="mr15" src="../img/commonImg/sidebar3.png"/>已办/已阅
+										</a>
+									</li>
+									<li>
+										<a class="navLink" href="javascript:void(0);">
+											<img class="mr15" src="../img/commonImg/sidebar4.png"/>管理维护
+										</a>
+									</li>
+								</ul>
+								<div class="siderBarToggle pa">
+									 <img src="../img/commonImg/icon_toLeft.gif"  onclick="closeLeftBar()"/>
+									 <img src="../img/commonImg/icon_toRight.gif" onclick="openLeftBar()"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--左侧  end-->
+					<!--右侧自适应-面板-->
+					<div class="rightMain section">
+						<!--普通的panel  面包屑导航/按钮操作区-->
+						<div class="panel panel-default panel-breadcrumb">
+							<div class="rightTopSec">
+								<!--面包屑部分-->
+								<ol class="breadcrumb">
+									<li>
+										<a href="javascript:void(0);">待办中心</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">待阅事项</a>
+									</li>
+								</ol>
+							</div>
+						</div>
+						<!--普通的panel 搜索栏-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="searchBox">
+								<ul class="list-unstyled mb0">
+									<li class="input">
+										<input type="text" class="searchIpt" placeholder="请输入查找内容" />
+										<img src="../img/commonImg/search.png" class="searchIcon" onclick="handleSearch()" />
+									</li>
+									<li class="selectLi fr">
+										<label>文档状态</label>
+										<select class="select">
+											<option value="">请选择</option>
+											<option value="1">最近一周</option>
+											<option value="2">最近一月</option>
+											<option value="3" selected>最近三个月</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--普通的panel   搜索结果列表-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-heading">
+								<h3 class="panel-title">待阅记录</h3>
+								<div class="panel-hd-btns">
+							   		<button class="btn btn-tahoe mr20" style="width: 90px;"><img src="../img/commonImg/icon_check_all.png"><span class="vm">置为已办</span></button>
+							   		<button class="btn btn-tahoe"><img src="../img/commonImg/icon_del.png"><span class="vm">删除</span></button>
+							   	</div>
+							</div>
+							<!-- table begin -->
+							<table class="table table-striped-chg table-tahoe table-condensed">
+								<thead class="tc">
+									<tr>
+										<th width="5%"><input type="checkbox" /></th>
+										<th width="5%">序号</th>
+										<th width="70%" class="tl">标题</th>
+										<th width="20%">接收时间</th>
+									</tr>
+								</thead>
+								<tbody class="tc">
+									<tr>
+										<td><input type="checkbox" name="process" /></td>
+										<td>1</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td >2</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td >3</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td >4</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td >5</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td >6</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td>7</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td>8</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td>9</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+									<tr>
+										<td ><input type="checkbox" name="process" /></td>
+										<td >10</td>
+										<td class="tl">
+											<a href="javascript:void(0);">因公外出_去三元桥工商局申报一季度账务 </a>
+										</td>
+										<td>2018年3月22日14:10</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- table end -->
+							<div class="panel-footer">
+								<div class="pageIniation">
+									<div class="pageLeft">
+										<span class="ml30 mr20">显示第 1 到第 50 条记录，总共55条记录</span>
+										<!--<span class="mr10">每页显示 <input type="text" class="pageIpt"/>条记录</span>-->
+										<span>每页显示 
+											<select class="pageIpt">
+												<option value="0">5</option>
+												<option value="1">10</option>
+												<option value="2">15</option>
+												<option value="3">20</option>
+												<option value="4">25</option>
+												<option value="5">50</option>
+											</select>
+										</span>
+										<span class="mr5">条记录</span>
+										<a href="javascript:void(0);">刷新</a>
+									</div>
+									<div class="pageRight">
+										<ul class="list-unstyled mb0 ml50">
+											<li>&lt;</li>
+											<li>1</li>
+											<li class="tahoe-red">2</li>
+											<li>3</li>
+											<li>4</li>
+											<li>5</li>
+											<li>......</li>
+											<li>16</li>
+											<li>17</li>
+											<li>18</li>
+											<li>19</li>
+											<li>&gt;</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--右侧  end-->
+				</div>
+				<!--这是内容部分  end-->
+			</div>
+		</div>
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/icheck/js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//调用Icheck插件，渲染checkbox样式；
+				$("[type='checkbox'],[type='radio']").iCheck({
+					checkboxClass: 'icheckbox_minimal-red',
+					radioClass: 'iradio_minimal-blue',
+				});
+				
+				//初始化处理侧边栏高度；
+				handleSiderBarH();
+				
+//			//处理左侧高度；
+//			function handleSiderBarH() {
+//				var rightH = $(".rightMain").Css("height");
+//				var siderBarH=parseInt(rightH)-10;
+//				$(".leftFloat .siderBarPanel").Css("height", siderBarH);
+//			};
+//			//左侧边栏折叠；
+//			function closeLeftBar(){
+//				var isIE=browserInfo.versions.trident;
+//				if(isIE){
+//					$(".leftFloat").Css({"width":"1px","padding-left":0});
+//					$(".leftLinkUl").addClass("none");
+//					$(".rightMain").Css("width","99%");
+//				}else{
+//					$(".leftFloat").Css({"width":0,"padding-left":0});
+//					$(".leftLinkUl").addClass("none");
+//					$(".rightMain").Css("width","100%");
+//				}
+//			}
+//			//左侧边栏打开；
+//			function openLeftBar(){
+//				$(".leftFloat").Css("width","240px");
+//				$(".leftLinkUl").removeClass("none");
+//				var rightWidth=$(".wrapper").Css("width");
+//				$(".rightMain").Css("width",parseInt(rightWidth)-240);
+//			}
+		</script>
+	</body>
+
+</html>

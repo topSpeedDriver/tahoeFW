@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新闻-首页</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css" />
+    <link rel="stylesheet" type="text/css" href="../Content/Css/zTreeStyle/zTreeStyle.css"/>
+    <link rel="stylesheet" href="../Content/Css/base.css" />
+    <link rel="stylesheet" href="../Content/Css/main1.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!--这是头部-->
+        <header class="col-md-12 header">
+            <div class="col-md-10 left">
+                <img src="../img/commonImg/logo.png" />
+                <span class="topic">新闻中心</span>
+            </div>
+            <div class="col-md-2  login">
+                <span>下午好，</span>
+                <a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                    <li><i class="glyphicon glyphicon-log-out"></i>
+                        <a href="/ekp/logout.jsp">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!--这是头部  end-->
+        <!--这是内容部分  begin-->
+        <div class="wrapper  pl20 pr20">
+            <!--左侧 固定宽300 面板-->
+            <div class="leftFloat section">
+                <!--普通的panel  左侧导航区域  leftLinkSec-->
+                <div class="panel panel-default tahoe-panel siderBarPanel">
+                    <div class="panel-body  leftLinkSec p20">
+                        <ul class="list-unstyled leftLinkUl">
+                            <li>
+                                <a class="navLink checked" href="javascript:void(0)">
+                                    <img class="mr15" src="../img/commonImg/sidebar4.png" /> 新闻公告查询
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navLink" href="新闻-我提交的新闻稿.html">
+                                    <img class="mr15" src="../img/commonImg/sidebar1.png" /> 我提交的新闻稿
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navLink" href="javascript:void(0)">
+                                    <img class="mr15" src="../img/commonImg/sidebar2.png" /> 管理员操作
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="siderBarToggle pa">
+                            <img src="../img/commonImg/icon_toLeft.gif"  onclick="closeLeftBar()"/>
+                            <img src="../img/commonImg/icon_toRight.gif" onclick="openLeftBar()"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--左侧  end-->
+            <!--右侧自适应-面板-->
+            <div class="rightMain section">
+                <!--普通的panel  面包屑导航/按钮操作区-->
+                <div class="panel panel-default panel-breadcrumb">
+                    <div class="rightTopSec">
+                        <!--面包屑部分-->
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="javascript:void(0);">新闻中心</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">首页</a>
+                            </li>
+                        </ol>
+                        <!--操作按钮区域-->
+                        <div class="operaSec pr">
+                        	<button type="button"  class="btn btn-tahoe  mr10" data-toggle="modal" data-target="#newsTopModal">置顶</button>
+                            <button type="button"  class="btn btn-tahoe  mr10" >批量修改权限</button>
+                            <button type="button"  class="btn btn-tahoe  mr10" data-toggle="modal" data-target="#chooseTypeModal">新建</button>
+                            <button id="moreBtns"  type="button" class="btn btn-tahoe dropdown-toggle" data-toggle="dropdown">更多&nbsp;<span class="caret"></span></button>
+						                <ul class="dropdown-menu dropdown-btnsec" aria-labelledby="moreBtns">
+						                    <li><button type="button" class="btn btn-tahoe">置顶</button></li>
+						                    <li><button type="button" class="btn btn-tahoe">取消置顶</button></li>
+						                    <li><button type="button" class="btn btn-tahoe">取消发布</button></li>
+						                    <li><button type="button" class="btn btn-tahoe">删除</button></li>
+						                </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--普通的panel 搜索栏-->
+                <div class="panel panel-default tahoe-panel">
+                    <div class="searchBox">
+                        <ul class="list-unstyled mb0">
+                            <li class="input">
+                                <input type="text" class="searchIpt" placeholder="请输入查找主题" />
+                                <img src="../img/commonImg/search.png" class="searchIcon" onclick="handleSearch()" />
+                                <a href="javascript:void(0)" class="ml15" onclick="toggleFilterBox(this)">高级搜索 <i class="caret" id="caret"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--点击展开更多搜索条件-->
+                    <div class="filterBox" id="filterBox" style="display: none;">
+                        <div class="form-tahoe clearfix">
+                            <!--组织机构-->
+                            <div class="form-group double">
+                                <label class="control-label">新闻来源</label>
+                                <div class="form-input">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--创建时间-->
+                            <div class="form-group  double">
+                                <label class="control-label">创建时间</label>
+                                <div class="form-input chooseCon">
+                                    <select class="form-control" style="width:20%;" onchange="chgTimeIpt(this)">
+                                        <option value="0">等于</option>
+                                        <option value="1">早于</option>
+                                        <option value="2">晚于</option>
+                                        <option value="3">不早于</option>
+                                        <option value="4">不晚于</option>
+                                        <option value="5">介于</option>
+                                    </select>
+                                   <input type="text" class="form-control bs-timepicker fr mt2" style="width:78%;">
+                                </div>
+                            </div>
+                            <div class="form-group  double">
+                                <label class="control-label">文档内容</label>
+                                <div class="form-input chooseCon">
+                                    <!--<input type="text" class="form-control" style="width:78%;">
+                                    <button type="button" class="btn fr mt2">选择</button>-->
+							      	<input type="text" class="form-control inline_block" style="width:55%;" disabled>
+							      	<button type="button" class="btn btn-choose vtop ml5 mt2">选择</button>
+							      	<label class="decorate-icheck fr mt2"><input type="checkbox" class="js-icheck"/>外部人员</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group  double">
+                                <label class="control-label">文档分类</label>
+                                <div class="form-input chooseCon">
+                                    <!--<input type="text" class="form-control" style="width:78%;">
+                                    <button type="button" class="btn fr mt2">选择</button>-->
+                                    <input type="text" class="form-control inline_block" style="width:78%;">
+							      	<button type="button" class="btn btn-choose vtop ml5 mt2 none">选择</button>
+							      	<label class="decorate-icheck fr mt2"><input type="checkbox" class="js-icheck" checked="true"/>外部人员</label>
+                                </div>
+                            </div>
+                            <div class="form-group  double">
+                                <label class="control-label">创建者</label>
+                                <div class="form-input chooseCon">
+                                    <input type="text" class="form-control" style="width:78%;">
+                                    <button type="button" class="btn fr mt2">选择</button>
+                                </div>
+                            </div>
+                            <div class="form-group  double">
+                                <label class="control-label">作者</label>
+                                <div class="form-input chooseCon">
+                                    <input type="text" class="form-control" style="width:78%;">
+                                    <button type="button" class="btn fr mt2">选择</button>
+                                </div>
+                            </div>
+                            <div class="form-group  double">
+                                <label class="control-label">所属部门</label>
+                                <div class="form-input chooseCon">
+                                    <input type="text" class="form-control" style="width:78%;">
+                                    <button type="button" class="btn fr mt2">选择</button>
+                                </div>
+                            </div>
+
+
+                            <!--操作按钮-->
+                            <div class="form-group single operaSec">
+                                <button type="button" class="btn  btn-danger btn-search mr20"><img class="mr5"  src="../img/commonImg/icon_search.png"/>查找</button>
+                                <button type="button" class="btn btn-default btn-reset"><img class="mr5" src="../img/commonImg/icon_reset.png"/>重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--普通的panel   搜索结果列表-->
+                <div class="panel panel-default tahoe-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> 申请记录</h3>
+                    </div>
+                    <!-- table begin -->
+                    <table class="table table-striped-chg table-tahoe table-condensed">
+                        <thead>
+                        <tr>
+                            <th width="5%" class="tc"><input type="checkbox" /></th>
+                            <th width="5%" class="tc">序号</th>
+                            <th width="32%">主题</th>
+                            <th width="10%">文档重要度</th>
+                            <th width="13%">创建者</th>
+                            <th width="13%">发布时间</th>
+                            <th width="13%">修改时间</th>
+                            <th>点击率</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">1</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">2</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>重要</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">3</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">4</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">5</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">6</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">7</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">8</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">9</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input type="checkbox" name="process" /></td>
+                            <td class="tc">10</td>
+                            <td>
+                                <a href="新闻-浏览.html">温馨中国年的背后，有一群人在坚守 </a>
+                            </td>
+                            <td>普通</td>
+                            <td>陈菲</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>2018-03-10 16:22</td>
+                            <td>49</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- table end -->
+                    <div class="panel-footer">
+                        <div class="pageIniation">
+                            <div class="pageLeft">
+                                <span class="ml30 mr20">显示第 1 到第 50 条记录，总共55条记录</span>
+                                <!--<span class="mr10">每页显示 <input type="text" class="pageIpt"/>条记录</span>-->
+                                <span>每页显示
+											<select class="pageIpt">
+												<option value="0">5</option>
+												<option value="1">10</option>
+												<option value="2">15</option>
+												<option value="3">20</option>
+												<option value="4">25</option>
+												<option value="5">50</option>
+											</select>
+										</span>
+                                <span class="mr5">条记录</span>
+                                <a href="javascript:void(0);">刷新</a>
+                            </div>
+                            <div class="pageRight">
+                                <ul class="list-unstyled mb0 ml50">
+                                    <li>&lt;</li>
+                                    <li>1</li>
+                                    <li class="tahoe-red">2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>......</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>&gt;</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--右侧  end-->
+        </div>
+        <!--这是内容部分  end-->
+        <!--页面弹出框样式：modal Section  begin-->
+        <div class="col-md-12 modalSec">
+            <!-- Modal Begin-->
+            <!--新建弹出框-->
+            <div class="modal fade  modal-tahoe" id="chooseTypeModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog min-width" role="document">
+                    <div class="modal-content min-width">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h4 class="modal-title">选择分类</h4>
+                        </div>
+                        <div class="modal-body bodyCon">
+                            <ul class="orgTree list-unstyled">
+                                <li class="">
+                                    <div id="newsType" class="ztree"></div>
+                                </li>
+                            </ul>
+                            <p class="tc mt20 pr20" style="color: red;">我是一行文字</p>
+                        </div>
+                        <div class="modal-footer tc">
+                            <button type="button" class="btn btn-danger mr20" data-dismiss="modal" onclick="location.href='新闻-发起.html'">确定</button>
+                            <button type="button" class="btn mr20" style="background:#B4B4B4; color: white;" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal End-->
+            
+            
+        	<!--新闻置顶弹出框-->
+        	<div class="modal fade  modal-tahoe" id="newsTopModal" modelId="" tabindex="-1" role="dialog">
+			      <div class="modal-dialog w400" role="document">
+			        <div class="modal-content w400">
+			            <div class="modal-header">
+			                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+			                <h4 class="modal-title">置顶</h4>
+			              </div>
+			            <div class="modal-body">
+	                		<form class="form-horizontal ml15 mr15">
+	                			<div class="form-group">
+	                				<label class="pt5 control-label col-md-offset-2 col-md-3">置顶天数</label>
+	                				<div class="col-md-5">
+	                					<input type="number" class="min form-control"/>
+	                				</div>
+	                			</div>
+	                		</form>
+			            </div>
+			            <div class="modal-footer tc">
+			                <button type="button" class="btn btn-danger mr20">确定</button>
+			                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+			              </div>
+			        </div>
+			      </div>
+			</div>
+			
+        </div>
+        <!--页面弹出框样式：modal Section  end-->
+    </div>
+</div>
+<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="../plugins/icheck/js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Scripts/ztree/jquery.ztree.core.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Scripts/utils.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(function() {
+        //调用Icheck插件，渲染checkbox样式；
+        $("[type='checkbox'],[type='radio']").iCheck({
+            checkboxClass: 'icheckbox_minimal-red',
+            radioClass: 'iradio_minimal-blue',
+        });
+        //调用时间插件；
+        $(".bs-timepicker").datetimepicker({
+            language:  'zh',
+            format: 'yyyy-mm-dd hh:ii',
+            autoclose:true
+        });
+        //点击选中后，禁用button；
+        $(".js-icheck").on("ifChecked", function(event) {
+            var target = $(event.currentTarget);
+            var targetBtn = $(target).parents(".chooseCon").find(".btn");
+            var targetIpt = $(target).parents(".chooseCon").find("input:text");
+            targetBtn.addClass("none");
+            targetIpt.css("width", "78%").prop('disabled',false);;
+        })
+        $(".js-icheck").on("ifUnchecked", function(event) {
+            var target = $(event.currentTarget);
+            var targetBtn = $(target).parents(".chooseCon").find(".btn");
+            var targetIpt = $(target).parents(".chooseCon").find("input:text");
+            targetBtn.removeClass("none");
+            targetIpt.css("width", "55%").prop('disabled',true);
+        })
+        //初始化处理侧边栏高度；
+        handleSiderBarH();
+        //初始化弹窗口中组织机构树的样式；
+        var setting={
+//            check: {enable: true,chkStyle: "radio",radioType: "level"},
+//            data: {simpleData: {enable: true}},
+        };
+        var zNodes =[
+            { name:"选择类别",
+                open:true,
+                iconSkin:"pIconfolder",
+                children: [
+                    {     name:"产业公告",
+                        open:true,
+                        iconSkin:"pIconfolder",
+                        children: [
+                            {  name:"地产",
+                                iconSkin:"pIconfolder",
+                                children:[
+                                    {name:"地产1",iconSkin:"iconfile"},
+                                    {name:"地产2",iconSkin:"iconfile"}
+                                ]
+                            },
+                            {    name:"酒店",
+                                iconSkin:"pIconfolder",
+                                children:[
+                                    {name:"酒店1",iconSkin:"iconfile"}
+                                ]
+                            },
+                            { name:"商业",iconSkin:"iconfile"},
+                            { name:"院线",iconSkin:"iconfile"},
+                            { name:"教育",iconSkin:"iconfile"},
+                            { name:"医疗",iconSkin:"iconfile"},
+                            { name:"养老",iconSkin:"iconfile"}
+                        ]},
+                    { name:"集团公告",
+                        iconSkin:"pIconfolder",
+                        children: [
+                            { name:"北京区域",
+                                iconSkin:"pIconfolder",
+                                children:[
+                                    {name:"区域流程",iconSkin:"iconfile"},
+                                    {name:"太原地区",iconSkin:"iconfile"}
+                                ]
+                            }
+                        ]},
+                    { name:"集团动态",
+                        iconSkin:"pIconfolder",
+                        children:[
+                            { name:"业务事业部",
+                                iconSkin:"pIconfolder",
+                                children:[
+                                    {name:"TEST",iconSkin:"iconfile"},
+                                    {name:"太原地区",iconSkin:"iconfile"}
+                                ]
+                            }
+                        ]},
+                    { name:"产业新闻",
+                         iconSkin:"pIconfolder",
+                         children:[
+                             {name:"新闻一",iconSkin:"iconfile"},
+                             {name:"新闻二",iconSkin:"iconfile"}
+                     ]}
+                ]}
+        ];
+        $.fn.zTree.init($("#newsType"), setting, zNodes);
+    })
+    //为了可以动态切换panelHd的img.之后可能会有不同的icon，所以不用雪碧图；
+    function chgTabpanelHdImg(obj) {
+        var $target = $(obj);
+        var index = $target.parent("li").index();
+        var imgPath = "../img/commonImg/";
+        $target.find("img").attr("src", imgPath + "panel_icon" + (index + 1) + "_white.png");
+        $(".right-tabpanel>.nav-pills>li").eq(0).find("img").attr("src", imgPath + "panel_icon1_white.png");
+        $(".right-tabpanel>.nav-pills>li").eq(1).find("img").attr("src", imgPath + "panel_icon2_white.png");
+        $(".right-tabpanel>.nav-pills>li").eq(2).find("img").attr("src", imgPath + "panel_icon3_white.png");
+        var flag = $target.parent("li").hasClass("active");
+        if(!flag) {
+            $target.find("img").attr("src", imgPath + "panel_icon" + (index + 1) + "_blue.png");
+        }
+    }
+    //点击按钮隐藏或显示高级搜索区域；
+    function toggleFilterBox(obj) {
+        var filterBox = $("#filterBox");
+        $(filterBox).slideToggle(function() {
+            var flag = $("#caret").hasClass("caret");
+            if(flag) {
+                $("#caret").removeClass("caret")
+                $("#caret").addClass("caretUp");
+                handleSiderBarH();
+            } else {
+                $("#caret").removeClass("caretUp");
+                $("#caret").addClass("caret");
+                handleSiderBarH();
+            }
+        });
+    }
+    //处理左侧高度；
+//  function handleSiderBarH() {
+//      var rightH = $(".rightMain").Css("height");
+//      var siderBarH=parseInt(rightH)-10;
+//      $(".leftFloat .siderBarPanel").Css("height", siderBarH);
+//  };
+//  //左侧边栏折叠；
+//  function closeLeftBar(){
+//      var isIE=browserInfo.versions.trident;
+//      if(isIE){
+//          $(".leftFloat").Css({"width":"1px","padding-left":0});
+//          $(".leftLinkUl").addClass("none");
+//          $(".rightMain").Css("width","99%");
+//      }else{
+//          $(".leftFloat").Css({"width":0,"padding-left":0});
+//          $(".leftLinkUl").addClass("none");
+//          $(".rightMain").Css("width","100%");
+//      }
+//  }
+//  //左侧边栏打开；
+//  function openLeftBar(){
+//      $(".leftFloat").Css("width","240px");
+//      $(".leftLinkUl").removeClass("none");
+//      var rightWidth=$(".wrapper").Css("width");
+//      $(".rightMain").Css("width",parseInt(rightWidth)-240);
+//  }
+    //点击select框，根据选顶的值切换对应的输入时间框；
+			function chgTimeIpt(obj){
+				var checkedVal=$(obj).val();
+				var timeIpt1=$("<input type='text'/>").addClass("form-control bs-timepicker mr5").css("width","37%");
+				var timeIpt2=$("<input type='text'/>").addClass("form-control bs-timepicker").css("width","37%");
+				var timeIpt3=$("<input type='text'/>").addClass("form-control bs-timepicker fr mt2").css("width","78%");
+				if(checkedVal=="5"){
+					$(obj).parent("div").children(".bs-timepicker").remove();
+					$(obj).parent("div").append(timeIpt1,timeIpt2);
+				}else{
+					$(obj).parent("div").children(".bs-timepicker").remove();
+					$(obj).parent("div").append(timeIpt3);
+				}
+				handleTimePicker();
+			}
+			//事件触发，弹出时间选择控件；
+			function handleTimePicker(){
+				$(".bs-timepicker").datetimepicker({
+					language:  'zh', 
+					format: 'yyyy-mm-dd hh:ii',
+					autoclose:true		
+				})
+			}
+</script>
+</body>
+
+</html>

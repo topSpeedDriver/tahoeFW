@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="skins/all.css" />
+	</head>
+
+	<body>
+		<!--container begin-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<table id="testTable">
+						<thead>
+							<tr>
+								<th><input type="checkbox" class="js-checkbox-all"> 全选</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--container end-->
+		<script src="../../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../Scripts/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//启动icheck
+				$(("[type='checkbox']")).iCheck({
+					checkboxClass: 'icheckbox_minimal-red',
+				});
+				var $checkboxAll = $(".js-checkbox-all"),
+					$checkbox = $("tbody").find("[type='checkbox']"),
+					length = $checkbox.length,
+					i = 0;
+				//全选checkbox
+				$checkboxAll.on("ifClicked", function(event) {
+					if(event.target.checked) {
+						$checkbox.iCheck('uncheck');
+						i = 0;
+					} else {
+						$checkbox.iCheck('check');
+						i = length;
+					}
+				});
+				$checkbox.on('ifClicked', function(event) {
+					event.target.checked ? i-- : i++;
+					if(i == length) {
+						$checkboxAll.iCheck('check');
+					} else {
+						$checkboxAll.iCheck('uncheck');
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>内部论坛-详情</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main1.css" />
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--头部 begin-->
+				<header class="col-md-12 header">
+					<div class="col-md-10 left">
+						<img src="../img/commonImg/logo.png" />
+						<span class="topic">论坛中心</span>
+					</div>
+					<div class="col-md-2  login">
+						<span>下午好，</span>
+						<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown1">
+							<li><i class="glyphicon glyphicon-log-out"></i>
+								<a href="/ekp/logout.jsp">退出</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+				<!--头部  end-->
+				<!--内容部分  begin-->
+				<div class="wrapper col-md-12" style="padding:0;">
+					<div class="fixedWidthCon">
+						<!--内容部分  顶部区域-->
+						<div class="topSec">
+							<!--面包屑部分-->
+							<ol class="breadcrumb">
+								<li>
+									<a href="javascript:void(0);">论坛中心</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">员工天地</a>
+								</li>
+							</ol>
+							<!--操作按钮区域-->
+							<div class="operaSec pr" id="operaSecBtns">
+								<button operaSec class="btn btn-tahoe mr10 none">按人员查看</button>
+								<button operaSec class="btn btn-tahoe mr10 none">发贴</button>
+								<button operaSec class="btn btn-tahoe mr10 none">取消置顶</button>
+								<button operaSec class="btn btn-tahoe mr10 none">置为精华</button>
+								<button operaSec class="btn btn-tahoe mr10 none">结贴</button>
+								<button operaSec class="btn btn-tahoe mr10 none">转移</button>
+								<button operaSec class="btn btn-tahoe mr10 none">删除</button>
+								<button operaSec class="btn btn-tahoe none" onclick="closeWin()">关闭</button>
+							</div>
+						</div>
+						<!--内容部分 begin-->
+						<div class="section  bbsSection">
+							<ul class="list-unstyled bbsHd mt10">
+								<li class="ml10">所属板块：
+									<a href="#">员工天地</a>
+								</li>
+								<li class="ml20">版主：<span>物业114</span></li>
+								<li class="fr mr10">
+									<a class="topBtn">返回论坛主页</a>
+								</li>
+							</ul>
+							<!--楼主-->
+							<div class="bbsBd">
+								<ul class="list-unstyled topic mb0">
+									<li class="bbs-l tc bold">发表人</li>
+									<li class="bbs-r">
+										<p><img src="../img/forum/stick.gif" /><span class="ml5">主话题：</span>想在慕盛公寓长租房子，请问应该联系谁。想在慕盛公寓长租房子，请问应该联系谁。</p>
+									</li>
+								</ul>
+								<ul class="list-unstyled mb0 bbsInfoWrap">
+									<li class="bbs-l">
+										<ol class="list-unstyled bbs-userInfo">
+											<li class="tc"><img class="bbs-userImg" src="../img/forum/head.jpg" onclick="location.href='论坛-用户信息 .html'" /></li>
+											<li>
+												<a href="#">等级：新手上路</a>
+											</li>
+											<li><span>来自：接待外联组 </span></li>
+											<li><span>岗位：集团行政专员（外联礼品/员工沟通/文化活动）</span></li>
+											<li><span>发文：1篇</span></li>
+											<li><span>积分：10</span></li>
+										</ol>
+									</li>
+									<li class="bbs-r">
+										<div class="bbs-content">
+											<div class="bbs-con-top">
+												<img src="../img/forum/member.gif" class="vtTop" />
+												<a href="#" class="link bold">庄晓玲</a>
+												<span class="time">发表于：2018-03-29 13:48:46</span>
+												<span class="ml15 mr15">|</span>
+												<a href="#" class="link">只查看该作者</a>
+												<span class="fr bold tahoe-red">（楼主）</span>
+											</div>
+											<div class="bbs-con-mid"> </div>
+											<div class="bbs-con-bot">
+												<a href="#" class="mr15 link"><img class="mr5" src="../img/forum/post_reply.jpg" />回复</a>
+												<a href="#" class="link"><img class="mr5" src="../img/forum/post_quote.jpg" />引用</a>
+												<a href="#" class="link showModel" modelId="banModal"><img class="mr5" src="../img/forum/post_quote.jpg" />禁言</a>
+												<a href="#" class="link showModel" modelId="shieldModal"><img class="mr5" src="../img/forum/post_quote.jpg" />屏蔽</a>
+												<a href="#" class="fr"><img class="mb10" src="../img/forum/post_top.gif" /></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--第二楼-->
+							<div class="bbsBd">
+								<ul class="list-unstyled topic mb0">
+									<li class="bbs-l tc bold"></li>
+									<li class="bbs-r"></li>
+								</ul>
+								<ul class="list-unstyled mb0 bbsInfoWrap">
+									<li class="bbs-l">
+										<ol class="list-unstyled bbs-userInfo">
+											<li class="tc"><img class="bbs-userImg" src="../img/forum/head.jpg" onclick="location.href='论坛-用户信息 .html'" /></li>
+											<li>
+												<a href="#">等级：新手上路</a>
+											</li>
+											<li><span>来自：接待外联组 </span></li>
+											<li><span>岗位：集团行政专员（外联礼品/员工沟通外联礼品/员工沟通外联礼品/员工沟通外联礼品/员工沟通/员工沟通外联礼品/员工沟通/员工沟通外联礼品/员工沟通联礼品/员工沟通外联礼品/员工沟通外联礼品/员工沟通/员工沟通外联礼品/员工沟通/员工沟通外联礼品/员工沟通联礼品/员工沟通外联礼品/员工沟通外联礼品/员工沟通/员工沟通外联礼品/员工沟通/员工沟通外联礼品/员工沟通联礼品/员工沟通外联礼品/员工沟通外联礼品/员工沟通/员工沟）</span></li>
+											<li><span>发文：1篇</span></li>
+											<li><span>积分：10</span></li>
+										</ol>
+									</li>
+									<li class="bbs-r">
+										<div class="bbs-content">
+											<div class="bbs-con-top">
+												<img src="../img/forum/member.gif" class="vtTop" />
+												<a href="#" class="link bold">庄晓玲</a>
+												<span class="time">发表于：2018-03-29 13:48:46</span>
+												<span class="ml15 mr15">|</span>
+												<a href="#" class="link">只查看该作者</a>
+												<span class="fr bold tahoe-red">（第二楼）</span>
+											</div>
+											<div class="bbs-con-mid">
+												<!--这里添加一个-->
+												<p>
+													<input type="checkbox" class="mr5 vtop"/>
+													<img style="width:14px;" src="../img/commonImg/icon_excel.png"/>
+													<span>内部论坛--员工天地--刚刚！泰禾学堂开业啦.png(55.97KB)</span>
+													<a href="#">下载</a>
+												</p>
+												<p>
+													<input type="checkbox" class="mr5 vtop"/>
+													<img style="width:14px;" src="../img/commonImg/icon_doc.png"/>
+													<span>内部论坛--员工天地--刚刚！泰禾学堂开业啦.png(55.97KB)</span>
+													<a href="#">下载</a>
+												</p>
+												<p>
+													<input type="checkbox" class="mr5 vtop"/>
+													<img style="width:14px;" src="../img/commonImg/icon_ppt.png"/>
+													<span>内部论坛--员工天地--刚刚！泰禾学堂开业啦.png(55.97KB)</span>
+													<a href="#">下载</a>
+												</p>
+											</div>
+											<div class="bbs-con-bot">
+												<a href="#" class="mr15 link"><img class="mr5" src="../img/forum/post_reply.jpg" />回复</a>
+												<a href="#" class="link"><img class="mr5" src="../img/forum/post_quote.jpg" />引用</a>
+												<a href="#" class="fr"><img class="mb10" src="../img/forum/post_top.gif" /></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--第三楼-->
+							<div class="bbsBd">
+								<ul class="list-unstyled topic mb0">
+									<li class="bbs-l tc bold"></li>
+									<li class="bbs-r"></li>
+								</ul>
+								<ul class="list-unstyled mb0 bbsInfoWrap">
+									<li class="bbs-l">
+										<ol class="list-unstyled bbs-userInfo">
+											<li class="tc"><img class="bbs-userImg" src="../img/forum/head.jpg" onclick="location.href='论坛-用户信息 .html'" /></li>
+											<li>
+												<a href="#">等级：新手上路</a>
+											</li>
+											<li><span>来自：接待外联组 </span></li>
+											<li><span>岗位：集团行政专员（外联礼品/员工沟通/文化活动）</span></li>
+											<li><span>发文：1篇</span></li>
+											<li><span>积分：10</span></li>
+										</ol>
+									</li>
+									<li class="bbs-r">
+										<div class="bbs-content">
+											<div class="bbs-con-top">
+												<img src="../img/forum/member.gif" class="vtTop" />
+												<a href="#" class="link bold">庄晓玲</a>
+												<span class="time">发表于：2018-03-29 13:48:46</span>
+												<span class="ml15 mr15">|</span>
+												<a href="#" class="link">只查看该作者</a>
+												<span class="fr bold tahoe-red">（第三楼）</span>
+											</div>
+											<div class="bbs-con-mid">abc杜卡迪迪达拉手机发送；<br /><br /><br />abc杜卡迪迪达拉手机发送；
+												<br /><br /><br />abc杜卡迪迪达拉手机发送；<br /><br /><br />abc杜卡迪迪达拉手机发送；<br /><br /><br />abc杜卡迪迪达拉手机发送；<br /><br /><br />abc杜卡迪迪达拉手机发送；<br /><br /><br />abc杜卡迪迪达拉手机发送；
+											</div>
+											<div class="bbs-con-bot">
+												<a href="#" class="mr15 link"><img class="mr5" src="../img/forum/post_reply.jpg" />回复</a>
+												<a href="#" class="link"><img class="mr5" src="../img/forum/post_quote.jpg" />引用</a>
+												<a href="#" class="fr"><img class="mb10" src="../img/forum/post_top.gif" /></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<ul class="list-unstyled topic mb0">
+									<li class="bbs-l tc bold"></li>
+									<li class="bbs-r"></li>
+								</ul>
+							</div>
+							<!--尾部按钮-->
+							<div class="bbsHd w tr mt5 mb5">
+								<a class="topBtn">返回论坛主页</a>
+							</div>
+						</div>
+						<!--内容部分  end-->
+						<!--回复部分  begin-->
+						<div class="section bbsSection bbsAnswer">
+							<table class="table table-bordered table-tahoe table-condensed">
+								<tbody>
+									<tr>
+										<td width="10%">主题</td>
+										<td width="90%"><input type="text" class="topicIpt" /></td>
+									</tr>
+									<tr>
+										<td>板块</td>
+										<td>员工天地</td>
+									</tr>
+									<tr>
+										<td>内容</td>
+										<td>
+											<div class="editCon">此处需要富文本编辑器fckeditor</div>
+										</td>
+									</tr>
+									<tr>
+										<td>附件</td>
+										<td>
+											<ul class="list-unstyled mb0 ml20 fileUpSec">
+												<li class="tr">
+													<button type="button" class="btn btn-default btn-xs mr10">全部</button>
+													<button type="button" class="btn btn-info btn-xs mr10">添加</button>
+													<button type="button" class="btn btn-danger btn-xs mr10">删除</button>
+												</li>
+												<li>
+													<input type="checkbox" name="upfile" />
+													<img src="../img/commonImg/icon_doc.png"class="upfileIcon"/>
+													<a href="#">QQ截图20180301105549.png (8.68KB)</a>
+												</li>
+												<li>
+													<input type="checkbox" name="upfile" />
+													<img src="../img/commonImg/icon_ppt.png" class="upfileIcon"/>
+													<a href="#">QQ截图20180301105549.png (8.68KB)</a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="tc"><button type="button" class="btn btn-default btn-sm" style="padding:2px 20px;">回复</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--回复部分  end-->
+					</div>
+				</div>
+				<!--内容部分  end-->
+				
+				<!--禁言/屏蔽/取消屏蔽。页面弹出框样式 begin-->
+				<div class="col-md-12 modalforum forumModel-wrapper">
+					<!-- Modal Begin-->
+					<!--这是自定义  意见 弹出框-->
+					<!--禁言弹框-->
+					<div class="modal fade  modal-tahoe" id="banModal" modelId="" tabindex="-1" role="dialog">
+					      <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+					            <div class="modal-header">
+					                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+					                <h4 class="modal-title">禁言</h4>
+					              </div>
+					            <div class="modal-body">
+			                		<form class="form-horizontal ml15 mr15">
+			                			<div class="form-group">
+			                				<label class="pt5 control-label col-md-offset-2 col-md-3">禁言周期</label>
+			                				<div class="col-md-5">
+			                					<select class="form-control min">
+			                						<option value="">情节轻微：15天</option>
+			                					</select>
+			                				</div>
+			                			</div>
+			                		</form>
+					            </div>
+					            <div class="modal-footer tc">
+					                <button type="button" class="btn btn-danger mr20">确定</button>
+					                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					              </div>
+					        </div>
+					      </div>
+					</div>
+					<!--屏蔽弹框-->
+					<div class="modal fade  modal-tahoe" id="shieldModal" tabindex="-1" role="dialog">
+					      <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+					            <div class="modal-header">
+					                <button type="button" class="close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+					                <h4 class="modal-title">屏蔽</h4>
+					              </div>
+					            <div class="modal-body">
+					                		<form class="form-horizontal ml15 mr15">
+					                			<div class="form-group">
+					                				<label class="control-label col-md-3">屏蔽理由</label>
+					                				<div class="col-md-9">
+					                					 <textarea rows="3" class="form-control noResize" placeholder="可填写"></textarea>
+					                				</div>
+					                			</div>
+					                			<div class="form-group">
+					                				<label class="pt5 control-label col-md-3">禁言周期</label>
+					                				<div class="col-md-5">
+					                					<select class="min form-control">
+					                						<option value="">情节轻微：15天</option>
+					                					</select>
+					                				</div>
+					                			</div>
+					                		</form>
+					              </div>
+					            <div class="modal-footer tc">
+					                <button type="button" class="btn btn-danger mr20">确定</button>
+					                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					              </div>
+					        </div>
+					      </div>
+					</div>
+					<!--取消屏蔽弹框-->
+					<div class="modal fade  modal-tahoe" id="unShieldModal" tabindex="-1" role="dialog">
+					      <div class="modal-dialog" role="document">
+					        <div class="modal-content">
+					            <div class="modal-header">
+					                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+					                <h4 class="modal-title">取消屏蔽</h4>
+					              </div>
+					            <div class="modal-body">
+					                <p class="tc f16">确定取消对该用户的屏蔽发言么?</p>
+				                </div>
+					            <div class="modal-footer tc">
+					                <button type="button" class="btn btn-danger mr20">确定</button>
+					                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+					              </div>
+					        </div>
+					      </div>
+					</div>
+					<!-- Modal End-->
+				</div>
+				<!--页面弹出框样式 end-->
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(function() {
+				handleBBSInfoH();
+				
+				
+				$(".bbs-con-bot .showModel").on('click',function(){
+					var _this = $(this);
+					var id = _this.parents('.bbsBd').attr('id');
+					var modelId = _this.attr('modelId');
+					$('#'+modelId).modal("show");
+				})
+				
+				foldBtns(3);
+			})
+			
+			
+			
+			function foldBtns(num,pid){//num为要保留得除了下拉外得button，pid为之导入前button的容器
+//			    num != 0;
+                if(arguments.length===1 && (typeof arguments[0] === 'string')){
+                    pid = arguments[0], num = 2;
+                }else {
+                    num = num || 2;
+                    pid = pid || '#operaSecBtns';//默认容器为#operaSecBtns
+                }
+//              btns 代表原始 btn 数量
+                var btns = $(pid).children('button[operaSec]');
+                if(btns.length<num+2)return;
+                
+                var downBtn = $('<button id="mBtns" type="button" class="btn btn-tahoe mr10 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">更多<span class="caret"></span></button>');
+                var ul = $('<ul id="btnsWrapper" class="dropdown-menu" aria-labelledby="mBtns"></ul>');
+
+                $(pid).append(downBtn,ul);
+                $.each(btns.slice(num),function(i,e){
+                   ul.append($('<li>').append($(e)));
+                });
+                btns.removeClass('none');
+            }
+                
+			
+			//closeWin()
+			function closeWin() {
+				window.close();
+			}
+			//处理右侧每个bbsInfoWrap的高度；
+			function handleBBSInfoH() {
+				var bbsInfoWrap = $(".bbsInfoWrap");
+				$.each(bbsInfoWrap, function(i, item) {
+					var leftInfo = $(item).find(".bbs-l");
+					var rightInfo = $(item).find(".bbs-r");
+					var rightContent = $(rightInfo).children(".bbs-content");
+					var leftInfoH = parseInt(leftInfo.height());
+					var rightInfoH = parseInt(rightInfo.height());
+					if(leftInfoH >= rightInfoH) {
+						$(rightInfo).height(leftInfoH);
+						$(rightContent).height(leftInfoH);
+					} else {
+						$(leftInfo).height(rightInfoH)
+						$(rightContent).height(rightInfoH)
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>传阅发起</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css"/>
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+					<!--这是头部-->
+					<header class="col-md-12 header">
+						 <div class="col-md-10 left">
+						 	<img src="../img/commonImg/logo.png"/>
+						 	<span class="topic">制度中心</span>
+						 </div>
+						 <div class="col-md-2  login">
+							<span>下午好，</span> 
+							<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+							<ul  class="dropdown-menu" aria-labelledby="dropdown1">
+								<li><i class="glyphicon glyphicon-log-out"></i><a href="/ekp/logout.jsp">退出</a></li>
+							</ul>
+						</div>
+					</header>
+					<!--这是头部  end-->
+					<!--这是内容部分  begin-->
+					<div class="wrapper col-md-12" style="padding:0;">
+						<div class="fixedWidthCon">
+						<!--内容部分  顶部区域-->
+							<div class="topSec">
+								<!--面包屑部分-->
+								<ol class="breadcrumb">
+									<li>
+										<a href="javascript:void(0);">流程中心</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">传阅发起</a>
+									</li>
+								</ol>
+								<!--操作按钮区域-->
+								<div class="operaSec">
+									<button class="btn btn-tahoe mr10">暂存</button>
+									<button class="btn btn-tahoe mr10">提交</button>
+									<button class="btn btn-tahoe">关闭</button>
+								</div>
+							</div>
+							<!--左侧自适应-面板-->
+							<div class="w section">
+							<!--普通的panel  基本信息-->
+								<div class="panel panel-default tahoe-panel">
+									<div class="panel-heading panel-heading-min panel-heading-top pr">
+									<span class="panel-caption">传阅</span>
+								</div>
+								<div class="panel-heading panel-heading-min" style="padding-top:0;">
+									<h3 class="panel-title">基本信息</h3>
+								</div>
+							  	<div class="panel-body">
+							   		<div class="form-tahoe">
+							   			<div class="form-group single">
+										    	<label class="control-label">发送传阅人</label>
+										    	<div class="form-input">
+										      	<input type="text" class="form-control" value="朱振波" readonly>
+										    	</div>
+										</div>
+										<div class="form-group double">
+										    	<label class="control-label">传阅时间</label>
+										    	<div class="form-input">
+										      	<input type="text" class="form-control" value="2018-05-09 14:10" readonly/>
+										    	</div>
+										</div>
+										<div class="form-group  double">
+										    	<label class="control-label">传阅对象<span class="required">*</span></label>
+										    	<div class="form-input">
+										      	<input type="text" class="form-control inline_block" style="width:76%;">
+										      	<button type="button" class="btn btn-choose fr">选择</button>
+										    	</div>
+										</div>
+										<div class="form-group single">
+										    	<label class="control-label">通知方式</label>
+										    	<div class="form-input">
+											      	<label class="mr5"><input type="checkbox" />代办</label>
+										    	</div>
+										</div>
+										<div class="form-group single">
+										    	<label class="control-label vtop mt5">备注</label>
+										    	<div class="form-input">
+										    		<textarea  class="form-control" placeholder="可填写" rows="3"></textarea>
+										    	</div>
+										</div>
+							   		</div>
+							  	</div>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--这是内容部分  end-->
+					
+			</div>
+		</div>
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/icheck/js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//调用时间插件；
+				$(".bs-timepicker").datetimepicker({
+					language:  'zh', 
+					format: 'yyyy-mm-dd hh:ii',
+					autoclose:true					
+				});
+				
+				//调用Icheck插件，渲染checkbox样式；
+				$("[type='checkbox'],[type='radio']").iCheck({
+					checkboxClass: 'icheckbox_minimal-red',
+					radioClass: 'iradio_minimal-blue',
+				});
+				
+			})
+		</script>
+	</body>
+
+</html>

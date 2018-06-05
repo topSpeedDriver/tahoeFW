@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>新闻-审批</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/icheck/skins/all.css" />
+		<link rel="stylesheet" type="text/css" href="../plugins/bootstrap_simple-line-icon/css/simple-line-icons.css"/>
+		<link rel="stylesheet" href="../Content/Css/base.css" />
+		<link rel="stylesheet" href="../Content/Css/main.css" />
+	</head>
+	<!--流程发起单/费用管理/流程审批单-->
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!--这是头部-->
+				<header class="col-md-12 header">
+					<div class="col-md-10 left">
+						<img src="../img/commonImg/logo.png" />
+						<span class="topic">新闻中心</span>
+					</div>
+					<div class="col-md-2  login">
+						<span>下午好，</span>
+						<a id="dropdown1" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">张丹丹<span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown1">
+							<li><i class="glyphicon glyphicon-log-out"></i>
+								<a href="/ekp/logout.jsp">退出</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+				<!--这是头部  end-->
+				<!--这是内容部分  begin-->
+				<div class="wrapper  pl20 pr20">
+					<!--内容部分  顶部区域  begin-->
+					<div class="topSec mt75">
+						<!--面包屑部分-->
+						<ol class="breadcrumb">
+							<li>
+								<a href="javascript:void(0);">新闻</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">审批</a>
+							</li>
+						</ol>
+						<!--操作按钮区域-->
+						<div class="operaSec">
+							<button class="btn btn-tahoe">关闭</button>
+						</div>
+					</div>
+					<!--顶部区域-end-->
+					<!--左侧自适应-面板-->
+					<div class="leftMain section">
+						<!--普通的panel  基本信息-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-heading ">
+								<h3 class="panel-title"> 主要内容</h3>
+							</div>
+							<div class="panel-body">
+								<div class="form-tahoe">
+									<div class="form-group single">
+										<label class="control-label">主题</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="关于2017-10-25前往福州、泉州的出差申请" title="关于2017-10-25前往福州、泉州的出差申请">
+										</div>
+									</div>
+									<div class="form-group single">
+										<label class="control-label">新闻来源</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="">
+										</div>
+									</div>
+									<div class="form-group  double">
+										<label class="control-label">重要程度</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="普通">
+										</div>
+									</div>
+									<div class="form-group double">
+										<label class="control-label">标签</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="">
+										</div>
+									</div>
+									<div class="form-group  double">
+										<label class="control-label">文档分类</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="产业新闻/地产/深圳">
+										</div>
+									</div>
+									<div class="form-group double">
+										<label class="control-label">发布时间</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="2018/03/01">
+										</div>
+									</div>
+									<div class="form-group double">
+										<label class="control-label">创建时间</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="2018/03/01">
+										</div>
+									</div>
+									<div class="form-group  double">
+										<label class="control-label">创建者</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="林舒桦 ">
+										</div>
+									</div>
+									<div class="form-group  double">
+										<label class="control-label">作者</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="林舒桦 ">
+										</div>
+									</div>
+									<div class="form-group  double">
+										<label class="control-label">所属部门</label>
+										<div class="form-input">
+											<input type="text" class="form-control" readonly value="响当当部门 ">
+										</div>
+									</div>
+									<div class="form-group  double">
+										<label class="control-label">标题图片</label>
+										<div class="form-input">
+											<img class="form-img" src="../img/tempImg/info_img1.png" alt="">
+										</div>
+									</div>
+									<div class="form-group single">
+										<label class="control-label vtop mt5">内容摘要</label>
+										<div class="form-input">
+											<textarea class="form-control" placeholder="可填写" rows="3" readonly>1、福州东二环泰禾广场现场巡检
+2、泉州东海泰禾广场开业后综合验收。</textarea>
+										</div>
+									</div>
+									<div class="form-group single">
+										<label class="control-label vtop mt5">文档内容</label>
+										<div class="form-input"> 富文本生成的内容 </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--普通的panel 附件 -->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-heading">
+								<h3 class="panel-title"> 附件</h3>
+								<div class="panel-hd-btns">
+									<button class="btn btn-tahoe mr10"><img src="../img/commonImg/icon_check_all.png"/><span class="vm">全选</span></button>
+									<button class="btn btn-tahoe mr10"><img src="../img/commonImg/icon_add.png"/><span class="vm">添加</span></button>
+									<button class="btn btn-tahoe mr20"><img src="../img/commonImg/icon_del.png"/><span class="vm">删除</span></button>
+								</div>
+							</div>
+							<!-- table begin -->
+							<table class="table table-tahoe  table-striped table-narrow table-condensed-min">
+								<tbody>
+									<tr>
+										<td width="8%"><input type="checkbox" /></td>
+										<td width="92%"><img src="../img/commonImg/icon_doc.png" alt="doc" class="mr10" width="22px" />
+											<a href="javascript:void(0);" class="underLine">深圳泰禾工作时间管理办法.doc (308.89KB)</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="8%"><input type="checkbox" /></td>
+										<td width="92%"><img src="../img/commonImg/icon_ppt.png" alt="ppt" class="mr10" width="22px" />
+											<a href="javascript:void(0);" class="underLine">深圳泰禾工作时间管理办法.ppt (308.89KB)</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="8%"><input type="checkbox" /></td>
+										<td width="92%"><img src="../img/commonImg/icon_rar.png" alt="rar" class="mr10" width="22px" />
+											<a href="javascript:void(0);" class="underLine">深圳泰禾工作时间管理办法.rar (1301KB)</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- table end -->
+						</div>
+						<!--普通的panel  流程说明-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-heading">
+								<h3 class="panel-title"> 流程说明</h3>
+							</div>
+							<div class="panel-body">
+									<p class="ml20">1. 此流程为集团内网新闻公告的发布过程。如发布内容重要程度较高，请在OA相应流程或请示报告中先行完成事项报批，再使用此流程进行发布； </p>
+									<p class="ml20">2. 建议的流转顺序为：申请人发起->申请人所在专业或单位的负责人（依新闻公告重要程度）审批->行政或人力公文管理员核稿发布。</p>
+							</div>
+						</div>		
+						<!--普通的panel  审批记录-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-heading">
+								<h3 class="panel-title"> 审批记录</h3>
+								<div class="panel-hd-btns">
+									<a href="javascript:void(0);" class="mr20 underLine">流程</a>
+									<a href="javascript:void(0);" class="mr20 underLine">阅读信息</a>
+								</div>
+							</div>
+							<!-- table begin -->
+							<table class="table table-striped-chg table-tahoe  table-narrow table-condensed">
+								<thead>
+									<tr>
+										<th width="15%">操作时间</th>
+										<th width="8%">停留时间</th>
+										<th width="12%">节点名称</th>
+										<th width="25%">操作者角色</th>
+										<th width="10%">操作人</th>
+										<th width="12%">审批操作</th>
+										<th width="18%">意见</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2017-10-23 16:53</td>
+										<td></td>
+										<td>起草节点</td>
+										<td>总部/设计研发部/商业板块设计组 <br />集团设计研发部商业板块设计组负责人</td>
+										<td>傅宁</td>
+										<td>提交文档</td>
+										<td>请审批
+											<div class="w mt5"><img class="mr5" width="14px" src="../img/commonImg/icon_ppt.png" />
+												<a href="javascript:void(0);">泰和集团2017年度中层领导述职.ppt</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2017-10-23 16:53</td>
+										<td></td>
+										<td>审核</td>
+										<td>总部/设计研发部/商业板块设计组 <br />集团设计研发部商业板块设计组负责人</td>
+										<td>傅宁</td>
+										<td>通过</td>
+										<td>(责任人相同，系统自动通过)
+											<div class="w mt5"><img class="mr5" width="14px" src="../img/commonImg/icon_rar.png" />
+												<a href="javascript:void(0);">泰和集团领导述职规范.rar</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2017-10-23 18:53</td>
+										<td>19时39分</td>
+										<td>审核</td>
+										<td>马裕隆</td>
+										<td>王峰</td>
+										<td>打回:"起草节点"</td>
+										<td>不同意（来自：移动终端）</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td>审核</td>
+										<td>总部/设计研发部 集团设计研发部负责人</td>
+										<td>赵利莎 肖敏</td>
+										<td>审批:串行</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td>抄送</td>
+										<td>总部/人力资源部 集团考勤主管</td>
+										<td>傅宁</td>
+										<td>打回:"起草节点"</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td>结束节点</td>
+										<td>马裕隆</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+								</tbody>
+							</table>
+							<!-- table end -->
+						</div>
+						<!--普通的panel  表格下说明文字-->
+					</div>
+					<!--左侧  end-->
+					<!--右侧 固定宽300 面板-->
+					<div class="rightFloat section">
+						<!--普通的panel  操作面板-->
+						<div class="panel panel-default tahoe-panel  panel-operate">
+							<div class="panel-heading">
+								<h3 class="panel-title" style="margin-left:-2px;">审批操作</h3>
+							</div>
+							<div class="panel-body" style="padding:0px 20px 10px;">
+								<!-- tabPanel begin -->
+								<div class="right-tabpanel mt20">
+									<!-- Nav tabs -->
+									<ul class="nav nav-pills">
+										<li class="active">
+											<a href="#success" data-toggle="tab"><i class="icon-check mr5"></i> 通过</a>
+										</li>
+										<li>
+											<a href="#fail" class="secondNode" data-toggle="tab"><i class="icon-action-undo mr5"></i>打回</a>
+										</li>
+										<li>
+											<a href="#teamwork" class="thirdNode" data-toggle="tab"><i class="icon-users mr5"></i>协办</a>
+										</li>
+										<li>
+											<a href="#other" class="forthNode"  data-toggle="tab"><i class="icon-arrow-left mr5"></i>转办</a>
+										</li>
+										<li>
+											<a href="#end" class="fifthNode"  data-toggle="tab"><i class="icon-close mr5"></i>结束</a>
+										</li>
+										<li>
+											<a href="#dust" class="sixthNode" data-toggle="tab"><i class="icon-trash mr5"></i>废弃</a>
+										</li>
+									</ul>
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<!--通过-->
+										<div class="tab-pane fade in active" id="success">
+											<div class="form-tahoe" style="margin:0;">
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">即将流向：</label>
+													<div class="form-input" style="width: 70%;">
+														<p class="form-control-static">N29.并行分支(
+															<a href="javascript:void(0);">营销总监</a>)</p>
+													</div>
+												</div>
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">常用意见：</label>
+													<div class="form-input" style="width: 40%;">
+														<select class="form-control">
+															<option value="">请选择</option>
+															<option value="">aaaa</option>
+															<option value="">bbb</option>
+														</select>
+													</div>
+													<div class="form-input vtop fr" style="width: 27%;">
+														<button  type="button" class="btn btn-default btn-sm form-control btn-defined" data-toggle="modal" data-target="#opinionModal">自定义</button>
+													</div>
+												</div>
+												<div class="form-group single has-error">
+													<textarea rows="4" class="form-control" placeholder="可填写">此处不能为空 (表单验证error样式)</textarea>
+												</div>
+											</div>
+										</div>
+										<!--打回-->
+										<div class="tab-pane fade" id="fail">
+											<div class="form-tahoe" style="margin:0;">
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">再发起时：</label>
+													<div class="form-input" style="width: 70%;">
+														<div class="form-control-static">
+															<label class="mr15 fwn" style="margin-bottom:0;"><input type="radio" name="again"value="1" class="pr5" checked="checked"/>&nbsp;&nbsp;返回打回人</label>
+															<label class="fwn"  style="margin-bottom:0;"><input type="radio" name="again"value="2"/>&nbsp;&nbsp;重走流程</label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">常用意见：</label>
+													<div class="form-input" style="width: 40%;">
+														<select class="form-control">
+															<option value="">请选择</option>
+															<option value="">aaa</option>
+															<option value="">bbb</option>
+														</select>
+													</div>
+													<div class="form-input vtop fr"style="width: 27%;">
+														<button  type="button" class="btn btn-default btn-sm form-control btn-defined" data-toggle="modal" data-target="#opinionModal">自定义</button>
+													</div>
+												</div>
+												<div class="form-group single">
+													<textarea rows="4" class="form-control" placeholder="可填写"></textarea>
+												</div>
+											</div>
+										</div>
+										<!--协办-->
+										<div class="tab-pane fade" id="teamwork">
+											<div class="form-tahoe" style="margin:0;">
+												<!--协办人员-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">协办人员：</label>
+													<div class="form-input" style="width: 67%;">
+														<input type="text" class="form-control inline_block" />
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<div class="form-group single">
+													<div class="form-input">
+														<label class="fwn" ><input type="checkbox"/><font class="ml5">隐藏协办意见</font></label>
+													</div>
+												</div>
+												<!--限制子集协办范围-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">限制子集协办范围：</label>
+													<div class="form-input" style="width: 67%;">
+														<select  class="form-control inline_block">
+															<option value="">请选择</option>
+															<option value="1">aa</option>
+															<option value="2">bb</option>
+														</select>
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<!--常用意见-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">常用意见：</label>
+													<div class="form-input" style="width: 40%;">
+														<select class="form-control">
+															<option value="">请选择</option>
+															<option value="1">aaa</option>
+															<option value="2">bbb</option>
+														</select>
+													</div>
+													<div class="form-input vtop fr" style="width: 27%;">
+														<button  type="button" class="btn btn-default btn-sm form-control btn-defined" data-toggle="modal" data-target="#opinionModal">自定义</button>
+													</div>
+												</div>
+												<div class="form-group single">
+													<textarea rows="4" class="form-control" placeholder="可填写"></textarea>
+												</div>
+											</div>
+										</div>
+										<!--转办-->
+										<div class="tab-pane fade" id="other">
+											<div class="form-tahoe" style="margin:0;">
+												<!--转办人员-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">转办人员：</label>
+													<div class="form-input" style="width: 67%;">
+														<input type="text" class="form-control inline_block" />
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<!--常用意见-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">常用意见：</label>
+													<div class="form-input" style="width: 40%;">
+														<select class="form-control">
+															<option value="">请选择</option>
+															<option value="1">aaa</option>
+															<option value="2">bbb</option>
+														</select>
+													</div>
+													<div class="form-input vtop fr" style="width: 27%;">
+														<button  type="button" class="btn btn-default btn-sm form-control btn-defined" data-toggle="modal" data-target="#opinionModal">自定义</button>
+													</div>
+												</div>
+												<div class="form-group single">
+													<textarea rows="4" class="form-control" placeholder="可填写"></textarea>
+												</div>
+											</div>
+										</div>
+										<!--结束-->
+										<div class="tab-pane fade" id="end">
+											<div class="form-tahoe" style="margin:0;">
+												<!--协办人员-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">协办人员：</label>
+													<div class="form-input" style="width: 67%;">
+														<input type="text" class="form-control inline_block" />
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<!--checkbox选项-->
+												<div class="form-group single">
+													<div class="form-input">
+														<label class="fwn" ><input type="checkbox"/><font class="ml5">允许多级协办</font></label>
+													</div>
+												</div>
+												<div class="form-group single">
+													<div class="form-input">
+														<label class="fwn" ><input type="checkbox"/><font class="ml5">隐藏协办意见</font></label>
+													</div>
+												</div>
+												<!--限制子集协办范围-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">限制子集协办范围：</label>
+													<div class="form-input" style="width: 67%;">
+														<select  class="form-control inline_block">
+															<option value="">请选择</option>
+															<option value="1">aa</option>
+															<option value="2">bb</option>
+														</select>
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<!--常用意见-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">常用意见：</label>
+													<div class="form-input" style="width: 40%;">
+														<select class="form-control">
+															<option value="">请选择</option>
+															<option value="1">aaa</option>
+															<option value="2">bbb</option>
+														</select>
+													</div>
+													<div class="form-input vtop fr" style="width: 27%;">
+														<button  type="button" class="btn btn-default btn-sm form-control btn-defined" data-toggle="modal" data-target="#opinionModal">自定义</button>
+													</div>
+												</div>
+												<div class="form-group single">
+													<textarea rows="4" class="form-control" placeholder="可填写"></textarea>
+												</div>
+											</div>
+										</div>
+										<!--废弃-->
+										<div class="tab-pane fade" id="dust">
+											<div class="form-tahoe" style="margin:0;">
+												<!--协办人员-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">协办人员：</label>
+													<div class="form-input" style="width: 67%;">
+														<input type="text" class="form-control inline_block" />
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<!--checkbox选项-->
+												<div class="form-group single">
+													<div class="form-input">
+														<label class="fwn" ><input type="checkbox"/><font class="ml5">允许多级协办</font></label>
+													</div>
+												</div>
+												<div class="form-group single">
+													<div class="form-input">
+														<label class="fwn" ><input type="checkbox"/><font class="ml5">隐藏协办意见</font></label>
+													</div>
+												</div>
+												<!--限制子集协办范围-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 100%;">限制子集协办范围：</label>
+													<div class="form-input" style="width: 67%;">
+														<select  class="form-control inline_block">
+															<option value="">请选择</option>
+															<option value="1">aa</option>
+															<option value="2">bb</option>
+														</select>
+													</div>
+													<div class="form-input fr" style="width: 27%;">
+														<button type="button" class="btn btn-default vtop  form-control btn-defined">选&nbsp;择</button>
+													</div>
+												</div>
+												<!--常用意见-->
+												<div class="form-group single">
+													<label class="control-label" style="width: 25%;">常用意见：</label>
+													<div class="form-input" style="width: 40%;">
+														<select class="form-control">
+															<option value="">请选择</option>
+															<option value="1">aaa</option>
+															<option value="2">bbb</option>
+														</select>
+													</div>
+													<div class="form-input vtop fr" style="width: 27%;">
+														<button  type="button" class="btn btn-default btn-sm form-control btn-defined" data-toggle="modal" data-target="#opinionModal">自定义</button>
+													</div>
+												</div>
+												<div class="form-group single">
+													<textarea rows="4" class="form-control" placeholder="可填写"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- tabPanel end -->
+							</div>
+						</div>
+						<!--普通的panel  添加附件-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-heading">
+								<h3 class="panel-title" style="margin-left:-2px;">添加附件</h3>
+								<div class="panel-hd-btns">
+									<div class="btn-section">
+										<button class="btn btn-tahoe"><img src="../img/commonImg/icon_check_all.png"/><span class="vm">全选</span></button>
+										<button class="btn btn-tahoe"><img src="../img/commonImg/icon_add.png"/><span class="vm">添加</span></button>
+										<button class="btn btn-tahoe"><img src="../img/commonImg/icon_del.png"/><span class="vm">删除</span></button>
+									</div>
+								</div>
+							</div>
+							<table class="table table-tahoe table-striped  table-narrow-min table-attach">
+								<tbody>
+									<tr>
+										<td width="15%"><input type="checkbox" name="r_check" /></td>
+										<td width="85%">
+											<p><img class="mr5" src="../img/commonImg/icon_ppt.png" />
+												<a href="javascript:void(0)">扁平化设计专题讲座.ppt(308.97KB)</a>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td width="15%"><input type="checkbox" name="r_check" /></td>
+										<td width="85%">
+											<p><img class="mr5" src="../img/commonImg/icon_doc.png" />
+												<a href="javascript:void(0)">产供销一条路服务内部培训高.doc(1048.2KB)</a>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td width="15%"><input type="checkbox" name="r_check" /></td>
+										<td width="85%">
+											<p><img class="mr5" src="../img/commonImg/icon_ppt.png" />
+												<a href="javascript:void(0)">扁平化设计专题讲座.ppt(308.97KB)</a>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td width="15%"><input type="checkbox" name="r_check" /></td>
+										<td width="85%">
+											<p><img class="mr5" src="../img/commonImg/icon_doc.png" />
+												<a href="javascript:void(0)">产供销一条路服务内部培训高.doc(1048.2KB)</a>
+											</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<!--普通的panel  提交-->
+						<div class="panel panel-default tahoe-panel">
+							<div class="panel-body submit-section">
+								<button type="button" class="btn submitBtn" style="background-color: #E63F3C; width:100%;">提交</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!--这是内容部分  end-->
+
+			</div>
+		</div>
+		<script src="../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/icheck/js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//调用Icheck插件，渲染checkbox样式；
+				$("[type='checkbox'],[type='radio']").iCheck({
+					checkboxClass: 'icheckbox_minimal-red',
+					radioClass: 'iradio_minimal-blue',
+				});
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>流程发起单</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="shortcut icon" href="../../img/commonImg/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../../Content/Css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../../Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugins/icheck/skins/all.css"/>
+		<link rel="stylesheet" href="../../Content/Css/base.css" />
+		<link rel="stylesheet" href="../../Content/Css/main.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+                <!--这是头部-->
+                <header class="col-md-12 header">
+                     <div class="col-md-8">
+                         <div class="row">
+                             <img class="logoImg" src="../../Content/Images/common/logo2.png"/>
+                             <span class="topic">首页</span>
+                         </div>
+                     </div>
+                     <div class="col-md-4 login">
+                         <div class="row">
+                             <span>欢迎您&nbsp;,</span>
+                             <a id="currentUser" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">刘百明<span class="caret"></span></a>
+                             <ul class="dropdown-menu" aria-labelledby="currentUser">
+                                 <li><i class="glyphicon glyphicon-log-out"></i><a href="javascript:void(0);">退出</a></li>
+                             </ul>
+                         </div>
+                    </div>
+                </header>
+                <!--这是头部  end-->
+			</div>
+		</div>
+		<script src="../../Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/icheck/js/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(window).scroll(rightFloatScroll);
+				
+				//调用时间插件；
+				$(".bs-timepicker").datetimepicker({
+					language:  'zh', 
+					format: 'hh:ii',
+					startView:1,
+					autoclose:true					
+				});
+//				$('#datetimepicker').datetimepicker('show');
+				$('.bs-timepicker-btn').on('click',function(){
+					var _this = $(this);
+					_this.siblings('.bs-timepicker').datetimepicker('show');
+				})
+				
+				//调用Icheck插件，渲染checkbox样式；
+				$("[type='checkbox'],[type='radio']").iCheck({
+					checkboxClass: 'icheckbox_minimal-red',
+					radioClass: 'iradio_minimal-blue',
+				});
+				var $checkboxAll = $(".js-checkbox-all"),
+					$checkbox = $checkboxAll.parents(".table").find("tbody [type='checkbox']"),
+					length = $checkbox.length,
+					i = 0;
+				//全选checkbox
+				$checkboxAll.on("ifClicked", function(event) {
+					if(event.target.checked) {
+						$checkbox.iCheck('uncheck');
+						i = 0;
+					} else {
+						$checkbox.iCheck('check');
+						i = length;
+					}
+				});
+				$checkbox.on('ifClicked', function(event) {
+					event.target.checked ? i-- : i++;
+					if(i == length) {
+						$checkboxAll.iCheck('check');
+					} else {
+						$checkboxAll.iCheck('uncheck');
+					}
+				})
+				
+				
+				
+			})
+			//处理滚动效果：点击页面滚动到预览流程部分；
+			function handleScroll(){
+				console.log("12345678");
+//				e.preventDefault();
+				$('html,body').animate({
+					scrollTop: $("#previewSec").offset().top
+				}, 1500);
+			}
+			//显示选择联系人的弹窗口；
+			function showContactModal(obj){
+				alert('显示联系人弹窗口！');
+				$(obj).blur();
+			}
+			
+			function rightFloatScroll(){
+				var rightView = $('.rightFloat');
+				if(rightView.length<1)return;
+				var leftView = $('.leftMain');
+				var topRuler = leftView.offset().top-20;
+				var scrollTop = $(this).scrollTop();
+				
+				if(scrollTop>=topRuler && !rightView.hasClass('approveFixed')){
+					rightView.addClass('approveFixed');
+					return;
+				}
+				if(scrollTop<topRuler && rightView.hasClass('approveFixed')){
+					rightView.removeClass('approveFixed');
+					return;
+				}
+			}
+//			if(scrollTop>=topRuler){
+//				rightView.Css('top',scrollTop+20);
+//			}
+		</script>
+	</body>
+
+</html>

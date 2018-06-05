@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>案件查询</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="img/commonImg/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="Content/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="Content/Css/bs-datetimepicker/bootstrap-datetimepicker.css"/>
+    <link rel="stylesheet" href="Content/Css/base.css" />
+    <link rel="stylesheet" href="Content/Css/main.css" />
+    <link rel="stylesheet" href="Content/Css/font/iconfont.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!--这是头部-->
+        <header class="col-md-12 header">
+            <div class="col-md-8 col-sm-8">
+                <div class="row">
+                    <img class="logoImg" src="Content/Images/common/logo.png"/>
+                    <span class="topic">案件查询</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 login">
+                <div class="row">
+                    <span>欢迎您&nbsp;,</span>
+                    <a id="currentUser" href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">刘百明<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="currentUser">
+                        <li><i class="glyphicon glyphicon-log-out"></i><a href="javascript:void(0);">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--这是头部  end-->
+
+        <!--这是左侧菜单 start-->
+        <nav class="left-menu">
+            <div class="nav-title">
+                <h6>诉讼管理系统</h6>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav1"></span>首页<i class="nextChild"></i></a></li>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav2"></span>案件上报<i class="nextChild"></i></a></li>
+                <li class="active"><a href="javascript:void(0);"><span class="icon icon-nav3"></span>统计查询<i class="nextChild"></i></a>
+                    <ul class="childUl">
+                        <li class="active"><a href="javascript:void(0);">案件查询<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);">费用律师统计<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);">我司承担诉讼<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);">流程统计<i class="nextChild"></i></a></li>
+                        <li><a href="javascript:void(0);">律师费用统计表<i class="nextChild"></i></a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav4"></span>律师管理<i class="nextChild"></i></a></li>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav5"></span>审批范本库<i class="nextChild"></i></a></li>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav6"></span>评价排名<i class="nextChild"></i></a></li>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav7"></span>系统配置<i class="nextChild"></i></a></li>
+                <li><a href="javascript:void(0);"><span class="icon icon-nav8"></span>帮助<i class="nextChild"></i></a></li>
+            </ul>
+            <a class="toggle-nav" href="javascript:void(0);"></a>
+        </nav>
+        <!--这是左侧菜单 end-->
+
+        <!--这是右侧主要内容 start-->
+        <div class="rightMain">
+            <div class="breadcrumb">
+                您现在的位置：<a href="#">统计查询</a>&nbsp;>&nbsp;>&nbsp;案件查询
+            </div>
+
+            <!--查询-->
+            <div class="panel panel-default tahoe-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">案件查询</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="single">
+                        <div class="searchBox w300">
+                            <input type="text" class="form-control searchIpt" placeholder="请输入查找内容">
+                            <button class="searchSmt" type="submit"></button>
+                        </div>
+                        <a href="javascript:void(0);" class="toggle-advance-search pl15">高级搜索<span class="caret"></span></a>
+                    </div>
+                </div>
+                <div class="panel-body advance-search-content" hidden>
+                    <div class="form-tahoe">
+                        <div class="form-group quadruple">
+                            <label class="control-label">案件编码</label>
+                            <div class="form-input">
+                                <input class="form-control" type="text" placeholder="输入案件编码">
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">案件名称</label>
+                            <div class="form-input">
+                                <input class="form-control" type="text" placeholder="输入案件名称">
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">涉案单位</label>
+                            <div class="form-input">
+                                <input class="form-control" type="text" placeholder="涉案单位名称">
+                            </div>
+                        </div>
+                        <div class="form-group quadruple tr">
+                            <button class="btn btn-tahoe mr20 w70">查询</button>
+                            <button class="btn btn-tahoe w70 mr2">导出</button>
+                        </div>
+
+
+                        <div class="form-group quadruple">
+                            <label class="control-label">律师名称</label>
+                            <div class="form-input">
+                                <input class="form-control" type="text" placeholder="输入律师名称">
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">事务所</label>
+                            <div class="form-input">
+                                <input class="form-control" type="text" placeholder="律师事务所">
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">涉案金额</label>
+                            <div class="form-input">
+                                <select name="" id="" class="form-control">
+                                    <option value="" disabled selected hidden>涉案金额</option>
+                                    <option value="">不限</option>
+                                    <option value="">10万以下</option>
+                                    <option value="">10万至100万</option>
+                                    <option value="">100万至500万</option>
+                                    <option value="">500万至1000万</option>
+                                    <option value="">1000万以上</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">执行中角色</label>
+                            <div class="form-input">
+                                <select name="" id="" class="form-control">
+                                    <option value="" disabled selected hidden>执行中角色</option>
+                                    <option value="">执行人</option>
+                                    <option value="">被执行人</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group quadruple">
+                            <label class="control-label">案件级别</label>
+                            <div class="form-input">
+                                <select name="" id="" class="form-control">
+                                    <option value="" disabled selected hidden>案件级别</option>
+                                    <option value="">不限</option>
+                                    <option value="">一般案件</option>
+                                    <option value="">重大案件</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">案件类型</label>
+                            <div class="form-input">
+                                <select name="" id="" class="form-control">
+                                    <option value="" disabled selected hidden>案件类型</option>
+                                    <option value="">不限</option>
+                                    <option value="">诉讼</option>
+                                    <option value="">仲裁</option>
+                                    <option value="">劳动仲裁</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">处理状态</label>
+                            <div class="form-input">
+                                <select name="" id="" class="form-control">
+                                    <option value="" disabled selected hidden>处理状态</option>
+                                    <option value="">不限</option>
+                                    <option value="">关闭</option>
+                                    <option value="">已完成</option>
+                                    <option value="">进行中</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">诉讼身份</label>
+                            <div class="form-input">
+                                <select name="" id="" class="form-control">
+                                    <option value="" disabled selected hidden>诉讼身份</option>
+                                    <option value="">不限</option>
+                                    <option value="">原告</option>
+                                    <option value="">被告</option>
+                                    <option value="">第三人</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group quadruple">
+                            <label class="control-label">上报时间</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control bs-timepicker" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label tc">&ensp;到</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control bs-timepicker" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label">结案时间</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control bs-timepicker" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group quadruple">
+                            <label class="control-label tc">&ensp;到</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control bs-timepicker" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--查询列表-->
+            <div class="panel panel-default tahoe-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">我关注的案件</h3>
+                </div>
+                <div class="panel-body table-parent">
+                    <table class="table table-striped-chg  table-tahoe table-condensed table-narrow-last-min m0Im">
+                        <thead>
+                            <tr>
+                                <th width="4%" class="tc">序号</th>
+                                <th width="8%" class="tc">案件编号</th>
+                                <th width="20%" class="tl">案件名称</th>
+                                <th width="7%" class="tc">案件类别</th>
+                                <th width="7%" class="tc">案件级别</th>
+                                <th width="7%" class="tc">诉讼身份</th>
+                                <th width="10%" class="tc">上报单位</th>
+                                <th width="10%" class="tr">涉案金额(万元)</th>
+                                <th width="10%" class="tc">涉案单位</th>
+                                <th width="8%" class="tc">案件阶段</th>
+                                <th width="10%" class="tr">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td class="tc">1</td>
+                                    <td class="tc">20180060</td>
+                                    <td class="tl"><a href="#" title="测试诉讼二审案件数据好多数据来着">测试诉讼二审案件数据好多数据来着</a></td>
+                                    <td class="tc">诉讼</td>
+                                    <td class="tc">一般案件</td>
+                                    <td class="tc">第三人</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tr">88888.00</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tc">案件上报</td>
+                                    <td class="tr">
+                                        <a href="javascript:void(0);">添加首页关注</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="tc">2</td>
+                                    <td class="tc">20180060</td>
+                                    <td class="tl"><a href="#" class="textHidden block" title="测试诉讼二审案件数据好多数据来着">测试诉讼二审案件数据好多数据来着</a></td>
+                                    <td class="tc">诉讼</td>
+                                    <td class="tc">一般案件</td>
+                                    <td class="tc">第三人</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tr">88888.00</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tc">案件上报</td>
+                                    <td class="tr">
+                                        <a href="javascript:void(0);">添加首页关注</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="tc">3</td>
+                                    <td class="tc">20180060</td>
+                                    <td class="tl"><a href="#" class="textHidden block" title="测试诉讼二审案件数据好多数据来着">测试诉讼二审案件数据好多数据来着</a></td>
+                                    <td class="tc">诉讼</td>
+                                    <td class="tc">一般案件</td>
+                                    <td class="tc">第三人</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tr">88888.00</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tc">案件上报</td>
+                                    <td class="tr">
+                                        <a href="javascript:void(0);">添加首页关注</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="tc">4</td>
+                                    <td class="tc">20180060</td>
+                                    <td class="tl"><a href="#" class="textHidden block" title="测试诉讼二审案件数据好多数据来着">测试诉讼二审案件数据好多数据来着</a></td>
+                                    <td class="tc">诉讼</td>
+                                    <td class="tc">一般案件</td>
+                                    <td class="tc">第三人</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tr">88888.00</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tc">案件上报</td>
+                                    <td class="tr">
+                                        <a href="javascript:void(0);">添加首页关注</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="tc">5</td>
+                                    <td class="tc">20180060</td>
+                                    <td class="tl"><a href="#" class="textHidden block" title="测试诉讼二审案件数据好多数据来着">测试诉讼二审案件数据好多数据来着</a></td>
+                                    <td class="tc">诉讼</td>
+                                    <td class="tc">一般案件</td>
+                                    <td class="tc">第三人</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tr">88888.00</td>
+                                    <td class="tc"><p class="textHidden" title="华夏幸福/华夏幸福/华夏幸福/华夏幸福">华夏幸福/华夏幸福/华夏幸福/华夏幸福</p></td>
+                                    <td class="tc">案件上报</td>
+                                    <td class="tr">
+                                        <a href="javascript:void(0);">添加首页关注</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer pb0 bgWhite">
+                    <div class="pageIniation">
+                        <div class="col-md-6 col-xs-6 pageLeft">
+                            <div class="row">
+                                <span class="mr20">显示第 1 到第 50 条记录，总共55条记录</span>
+                                <span>每页显示
+                                    <select class="pageIpt">
+                                        <option value="0">5</option>
+                                        <option value="1">10</option>
+                                        <option value="2">15</option>
+                                        <option value="3">20</option>
+                                        <option value="4">25</option>
+                                        <option value="5">50</option>
+                                    </select>
+                                </span>
+                                <span class="mr5">条记录</span>
+                                <a href="javascript:void(0);">刷新</a>
+                            </div>
+                        </div>
+                        <div class="pageRight col-md-6 col-xs-6 tr">
+                            <div class="row">
+                                <ul class="list-unstyled f0">
+                                    <li>&lt;</li>
+                                    <li>9999</li>
+                                    <li class="colorRed">9999</li>
+                                    <li>9999</li>
+                                    <li>9999</li>
+                                    <li>9999</li>
+                                    <li>......</li>
+                                    <li>9999</li>
+                                    <li>9999</li>
+                                    <li>9999</li>
+                                    <li>9999</li>
+                                    <li>&gt;</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--这是右侧主要内容 end-->
+    </div>
+</div>
+<script src="Scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="Scripts/bs-datetimepicker/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(function(){
+
+//      调用时间插件；
+        $(".bs-timepicker").datetimepicker({
+            language:  'zh',
+//          format: 'yyyy-mm-dd hh:ii',//调用年月日时分 打开
+
+            format: 'yyyy-mm-dd',//调用年月日 打开
+            minView : 2,//调用年月日 打开
+
+//          format: 'hh:ii',//调用时分 打开
+//          startView:1,//调用时分 打开
+
+            todayBtn : true,
+            autoclose:true
+        });
+
+        $('.toggle-nav').click(function(){
+            $('.left-menu').toggleClass('little');
+            $('.rightMain').toggleClass('large');
+        });
+
+        $('.toggle-advance-search').on('click',function(){
+            $('.advance-search-content').stop().slideToggle();
+            $(this).find('span').toggleClass('caret').toggleClass('caretUp');
+        })
+    });
+</script>
+</body>
+
+</html>
